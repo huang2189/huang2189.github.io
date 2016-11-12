@@ -120,18 +120,16 @@
                         
                             <li><a href="/Home">首頁</a></li>
                         
+                            <li><a href="/works">作品展示</a></li>
+                        
+                            <li><a href="/about">留言打卡</a></li>
+                        
+                            <li><a href="/FrontEndGuide">前端导航</a></li>
+                        
                         </ul>
                     </nav>
                     <nav class="header-nav">
                         <ul class="social">
-                            
-                                <a class="fl mail" target="_blank" href="/huang37@mail2000.com.tw" title="mail">mail</a>
-                            
-                                <a class="fl github" target="_blank" href="/huang2189" title="github">github</a>
-                            
-                                <a class="fl google" target="_blank" href="/huang7179" title="google">google</a>
-                            
-                                <a class="fl facebook" target="_blank" href="/huang37@mail2000.com.tw" title="facebook">facebook</a>
                             
                         </ul>
                     </nav>
@@ -140,7 +138,7 @@
                 
                 <section class="switch-part switch-part2">
                     <div class="widget tagcloud" id="js-tagcloud">
-                        
+                        <a href="/tags/Hexo/" style="font-size: 10px;">Hexo</a>
                     </div>
                 </section>
                 
@@ -191,19 +189,17 @@
                 
                     <li><a href="/Home">首頁</a></li>
                 
+                    <li><a href="/works">作品展示</a></li>
+                
+                    <li><a href="/about">留言打卡</a></li>
+                
+                    <li><a href="/FrontEndGuide">前端导航</a></li>
+                
                 <div class="clearfix"></div>
                 </ul>
             </nav>
             <nav class="header-nav">
                 <div class="social">
-                    
-                        <a class="mail" target="_blank" href="/huang37@mail2000.com.tw" title="mail">mail</a>
-                    
-                        <a class="github" target="_blank" href="/huang2189" title="github">github</a>
-                    
-                        <a class="google" target="_blank" href="/huang7179" title="google">google</a>
-                    
-                        <a class="facebook" target="_blank" href="/huang37@mail2000.com.tw" title="facebook">facebook</a>
                     
                 </div>
             </nav>
@@ -211,6 +207,113 @@
     </div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-Hexo-架站" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/11/12/Hexo-架站/" class="article-date">
+      <time datetime="2016-11-12T18:05:14.000Z" itemprop="datePublished">2016-11-12</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/11/12/Hexo-架站/">Hexo 架站</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <h1 id="建立環境"><a href="#建立環境" class="headerlink" title="建立環境"></a>建立環境</h1><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<p>初始化hexo到blog資料夾
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">hexo init blog</div></pre></td></tr></table></figure></p>
+<p>切到 blog 資料夾
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install</div></pre></td></tr></table></figure></p>
+<p>開伺服器，看網頁狀況
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">hexo s</div><div class="line">## 會顯示伺服器網址</div></pre></td></tr></table></figure></p>
+<hr>
+<p>安裝hexo托到github的工具
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install hexo-deployer-git --save</div></pre></td></tr></table></figure></p>
+<p><strong>修改 _config.yml 檔案</strong>
+在deploy:下加一些東西
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: git</div><div class="line">  repo: https://github.com/帳號/帳號.github.io.git</div><div class="line">  branch: master</div></pre></td></tr></table></figure></p>
+<hr>
+<p>使用Github SSH Key， 免去Hexo部署时輸入密碼，列出已存在的SSH Key。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">.ssh</div></pre></td></tr></table></figure></p>
+<p>生成SSH
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh-keygen</div></pre></td></tr></table></figure></p>
+<p>執行後會生成<strong>id_rsa.pub</strong>文件，畫面會提示檔名，開啓檔案，裡面就是SSH key的内容，key的內容會是以ssh開頭的文字，把內容copy起來，要貼到github。
+<br>
+進入github ==&gt; Seetings ==&gt; SSH and GPG keys ==&gt; New SSH keys ==&gt; Title自取 ==&gt; 把key內容貼到 Key 裡 ==&gt; Add SSH keys ==&gt;完成</p>
+<p>判斷SSH是否配置好
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssh -T git@github.com</div></pre></td></tr></table></figure></p>
+<p>出現以下文字就表示完成了
+<code>Hi huang2189! You&#39;ve successfully authenticated, but GitHub does not provide shell access.</code></p>
+<p>執行一次
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">hexo clean</div><div class="line">hexo g</div><div class="line">hexo d</div></pre></td></tr></table></figure></p>
+<p>第一次使用會詢問github的帳號跟密碼
+ 可以到<code>http://github帳號.github.io</code>看網頁生成的狀況</p>
+<hr>
+<hr>
+<h1 id="其他設定"><a href="#其他設定" class="headerlink" title="其他設定"></a>其他設定</h1><h2 id="標準的-markdown"><a href="#標準的-markdown" class="headerlink" title="標準的 markdown"></a>標準的 markdown</h2><p>在 <code>_config.yml</code> 中，鍵入以下參數</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">marked:</div><div class="line">   gfm: true</div><div class="line">   pedantic: false</div><div class="line">   sanitize: false</div><div class="line">   tables: false</div><div class="line">   breaks: false</div><div class="line">   smartLists: false</div><div class="line">   smartypants: false</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="更改-New-Page-預設畫面"><a href="#更改-New-Page-預設畫面" class="headerlink" title="更改 New Page 預設畫面"></a>更改 New Page 預設畫面</h2><p>更改路徑：scaffolds/post.md </p>
+<blockquote>
+<p>說明：在scaffolds目錄下，是新建頁面的模板，執行新建命令時，是根據這裡的模板頁來完成，所以可以在這裡根據需求添加一些預設值。</p>
+</blockquote>
+<p>原版面：
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">tags:</div><div class="line">---</div><div class="line">---</div></pre></td></tr></table></figure></p>
+<p>新增 <strong>分類 categories</strong> 項目</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">---</div><div class="line">title: &#123;&#123; title &#125;&#125;</div><div class="line">date: &#123;&#123; date &#125;&#125;</div><div class="line">categories:</div><div class="line">tags:</div><div class="line">---</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="中、英文中間加入空白鍵"><a href="#中、英文中間加入空白鍵" class="headerlink" title="中、英文中間加入空白鍵"></a>中、英文中間加入空白鍵</h2><p>更改路徑：_config.yml<br><strong>把auto_spacing: true加在default_layout下方。</strong><br>預設值為fasle  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"># Writing</div><div class="line">new_post_name: :title.md # File name of new posts</div><div class="line">default_layout: post</div><div class="line">auto_spacing: true</div></pre></td></tr></table></figure>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/Hexo/">Hexo</a>
+    </div>
+
+
+      
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+    </div>
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+
+
   
     <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
   
