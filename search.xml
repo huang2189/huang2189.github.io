@@ -61,4 +61,25 @@
     
   
   
+    
+    <entry>
+      <title><![CDATA[All tags]]></title>
+      <url>http://yoursite.com/tags/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[about]]></title>
+      <url>http://yoursite.com/about/index.html</url>
+      <content type="html"><![CDATA[<p>學習! 學習!</p>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[categories]]></title>
+      <url>http://yoursite.com/categories/index.html</url>
+      <content type="html"></content>
+    </entry>
+    
+  
 </search>
