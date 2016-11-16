@@ -208,11 +208,22 @@ define([], function(){
         }()
     }
 
+    // return {
+    //     init: function(){
+    //         resetTags();
+    //         bind();
+    //         Tips.init();
+    //     }
+    // }
+    
     return {
-        init: function(){
-            resetTags();
-            bind();
-            Tips.init();
-        }
-    }
+          init: function(){
+              resetTags();
+              bind();
+              Tips.init();
+              miniArchives();
+              tooltip();
+              search();
+          }
+      }
 });
