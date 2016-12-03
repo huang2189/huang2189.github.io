@@ -4,6 +4,19 @@
   
     
     <entry>
+      <title><![CDATA[讓網頁選擇在瀏覽器上運行]]></title>
+      <url>http://yoursite.com/2016/12/03/%E8%AE%93%E7%B6%B2%E9%A0%81%E9%81%B8%E6%93%87%E5%9C%A8%E7%80%8F%E8%A6%BD%E5%99%A8%E4%B8%8A%E9%81%8B%E8%A1%8C/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文="">
+在執行jsp的時候，Eclipse預設是在程式的工作區內執行  </the></p>
+<p><img src="https://i.imgbox.com/p0bdutVH.png" alt="">  </p>
+<p>想改到自己慣用的瀏覽器上，步驟如下：<br><code>windwo --&gt; Web Browser --&gt;選擇想要的瀏覽器</code></p>
+<p><img src="https://i.imgbox.com/QsZuUTnf.png" alt=""></p>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[ORA-28000:the account is locked]]></title>
       <url>http://yoursite.com/2016/12/03/20161203-01/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
