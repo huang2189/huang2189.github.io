@@ -15,20 +15,15 @@
 
 
 
-<meta name="description" content="資料庫帳號被鎖">
 <meta property="og:type" content="article">
-<meta property="og:title" content="ORA-28000:the account is locked">
-<meta property="og:url" content="http://yoursite.com/2016/12/03/20161203-01/index.html">
+<meta property="og:title" content="中文亂碼：環境編碼設定">
+<meta property="og:url" content="http://yoursite.com/2016/12/05/中文亂碼：環境編碼設定/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:description" content="資料庫帳號被鎖">
-<meta property="og:image" content="https://i.imgbox.com/TziEx2RA.png">
-<meta property="og:image" content="https://i.imgbox.com/VBQfopO7.png">
-<meta property="og:image" content="https://i.imgbox.com/Sj80hIM1.png">
-<meta property="og:updated_time" content="2016-12-03T13:17:07.046Z">
+<meta property="og:image" content="https://i.imgbox.com/6ltldv2s.png">
+<meta property="og:updated_time" content="2016-12-05T06:26:05.075Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="ORA-28000:the account is locked">
-<meta name="twitter:description" content="資料庫帳號被鎖">
-<meta name="twitter:image" content="https://i.imgbox.com/TziEx2RA.png">
+<meta name="twitter:title" content="中文亂碼：環境編碼設定">
+<meta name="twitter:image" content="https://i.imgbox.com/6ltldv2s.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +55,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>ORA-28000:the account is locked | ░ 菜鳥 ░</title>
+<title>中文亂碼：環境編碼設定 | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +266,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-20161203-01" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-中文亂碼：環境編碼設定" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/03/20161203-01/" class="article-date">
-      <time datetime="2016-12-03T13:13:37.000Z" itemprop="datePublished">2016-12-03</time>
+      <a href="/2016/12/05/中文亂碼：環境編碼設定/" class="article-date">
+      <time datetime="2016-12-05T06:24:15.000Z" itemprop="datePublished">2016-12-05</time>
 </a>
 
 
@@ -290,7 +285,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      ORA-28000:the account is locked
+      中文亂碼：環境編碼設定
     </h1>
   
 
@@ -299,13 +294,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/oracle/">oracle</a>
+    <a class="article-category-link" href="/categories/Eclipse/">Eclipse</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/錯誤訊息/">錯誤訊息</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Eclipse/">Eclipse</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -316,23 +311,11 @@
       
           
         <p><excerpt in="" index="" |="" 首頁摘要="">
-資料庫帳號被鎖
 <a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<hr>
-<p>環境：windows 7
-IDE：eclipse<br>資料庫：Oracle  </p>
-<hr>
-<p>問題：資料庫帳號被鎖<br>原因：當時Eclipse有context.xml跟hibernate.cfg.xml檔(不同人寫的)，裡面的帳號一樣但是密碼不一樣，造成資料庫帳號被鎖。</p>
-<p><img src="https://i.imgbox.com/TziEx2RA.png" alt=""></p>
-<p>帳號被鎖的解決辦法：<br>利用Run SQL Command Line以system身份解鎖  </p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"></div><div class="line">SQL*Plus: Release 11.2.0.2.0 Production on 星期一 11月 28 15:33:11 2016</div><div class="line"></div><div class="line">Copyright (c) 1982, 2010, Oracle.  All rights reserved.</div><div class="line"></div><div class="line">SQL&gt; connect system</div><div class="line">Enter password:</div><div class="line">Connected.</div><div class="line">SQL&gt; alter user AA104G2 account unlock;</div><div class="line"></div><div class="line">User altered.</div><div class="line"></div><div class="line">SQL&gt; commit;</div><div class="line"></div><div class="line">Commit complete.</div><div class="line"></div><div class="line">SQL&gt;</div></pre></td></tr></table></figure>
-<p><img src="https://i.imgbox.com/VBQfopO7.png" alt="">  </p>
-<p>再從Oracle SQL Developer進入一次  </p>
-<p><img src="https://i.imgbox.com/Sj80hIM1.png" alt="">  </p>
-<p><strong>在SQL Developer 則可以用系統連線到&quot;其他使用者&quot;更改密碼，但要先解鎖。</strong></p>
-<h2 id="重新建立連線"><a href="#重新建立連線" class="headerlink" title="重新建立連線"></a>重新建立連線</h2><p>這是下下策<br>做這件事之前要確定資料內容是不重要的。  </p>
-<hr>
+<p><the rest="" of="" contents="" |="" 全文="">
+有時候打開其他專案，會發現怎麼中文都變成亂碼，這是由於檔案的編碼和開發工具的環境編碼不一致的緣故。只要改變環境編碼設定即可。  </the></p>
+<p>選單：<br>Window --&gt; Preferences --&gt;<br>左選單選項<br>General --&gt; Workspace --&gt;
+在選單右邊下方的 &quot;Textfile encoding&quot;<br><img src="https://i.imgbox.com/6ltldv2s.png" alt=""></p>
 
       
     </div>
@@ -341,13 +324,13 @@ IDE：eclipse<br>資料庫：Oracle  </p>
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/12/03/20161203-01/">ORA-28000:the account is locked</a></p>
+        <p><span>本文標題:</span><a href="/2016/12/05/中文亂碼：環境編碼設定/">中文亂碼：環境編碼設定</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
-        <p><span>發布時間:</span>2016-12-03, 13:13:37</p>
-        <p><span>最後更新:</span>2016-12-03, 13:17:07</p>
+        <p><span>發布時間:</span>2016-12-05, 06:24:15</p>
+        <p><span>最後更新:</span>2016-12-05, 06:26:05</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/12/03/20161203-01/" title="ORA-28000:the account is locked">http://yoursite.com/2016/12/03/20161203-01/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/03/20161203-01/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/12/05/中文亂碼：環境編碼設定/" title="中文亂碼：環境編碼設定">http://yoursite.com/2016/12/05/中文亂碼：環境編碼設定/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/05/中文亂碼：環境編碼設定/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -359,16 +342,10 @@ IDE：eclipse<br>資料庫：Oracle  </p>
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/03/讓網頁選擇在瀏覽器上運行/">
-                    讓網頁選擇在瀏覽器上運行
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/11/12/Hexo-架站/">
-                    Hexo 架站
+                <a href="/2016/12/03/讓網頁選擇在瀏覽器上運行/">
+                    讓網頁選擇在瀏覽器上運行
                 </a>
             </div>
         
@@ -380,7 +357,7 @@ IDE：eclipse<br>資料庫：Oracle  </p>
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#重新建立連線"><span class="toc-number">1.</span> <span class="toc-text">重新建立連線</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -416,7 +393,7 @@ IDE：eclipse<br>資料庫：Oracle  </p>
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"ORA-28000:the account is locked　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"中文亂碼：環境編碼設定　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -432,7 +409,7 @@ IDE：eclipse<br>資料庫：Oracle  </p>
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/03/20161203-01/" data-title="ORA-28000:the account is locked" data-url="http://yoursite.com/2016/12/03/20161203-01/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/05/中文亂碼：環境編碼設定/" data-title="中文亂碼：環境編碼設定" data-url="http://yoursite.com/2016/12/05/中文亂碼：環境編碼設定/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -455,15 +432,13 @@ IDE：eclipse<br>資料庫：Oracle  </p>
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/03/讓網頁選擇在瀏覽器上運行/" title="上一篇: 讓網頁選擇在瀏覽器上運行">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/11/12/Hexo-架站/" title="下一篇: Hexo 架站">
+            <a href="/2016/12/03/讓網頁選擇在瀏覽器上運行/" title="下一篇: 讓網頁選擇在瀏覽器上運行">
                 <i class="fa fa-angle-right"></i>
             </a>
         
