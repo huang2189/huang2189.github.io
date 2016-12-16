@@ -4,6 +4,31 @@
   
     
     <entry>
+      <title><![CDATA[windows7升級成windows10之後的問題]]></title>
+      <url>http://yoursite.com/2016/12/16/windows7%E5%8D%87%E7%B4%9A%E6%88%90windows10%E4%B9%8B%E5%BE%8C%E7%9A%84%E5%95%8F%E9%A1%8C/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文="">
+問題：從windows7升級到windows10之後，網路連線會消失等等以前沒有遇過的狀況。<br>解決：更新，如下。  </the></p>
+<hr>
+<p><a href="https://www.asus.com/Motherboards/H97ME/HelpDesk_Download/" target="_blank" rel="external">驅動網址連接</a></p>
+<p>打開此網址后請選擇目前使用的OS系統</p>
+<p>系統若為windows10 64bit可重新安裝以下必要的驅動程式：</p>
+<p>1.Intel_Chipset 版本：10.0.27     晶片組驅動</p>
+<p>2.Intel(R) Management Engine Interface 版本：11.0.0.1146 （包含在公用程式中）</p>
+<ol>
+<li>Realtek Audio  版本6.0.1.7503 音效驅動</li>
+</ol>
+<p>4.Realtek LAN   版本：10.1.505.2015 網路驅動</p>
+<p>5.Intel Graphics Driver版本 ：10.18.15.4248 顯示驅動</p>
+<p>在安裝驅動程式前您可先程式將BIOS部份載入原廠最佳預設值</p>
+<p>開機后立刻點放DELETE進入BIOS
+【進入Bios--F5選ok--F10選儲存并離開】</p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[微軟軟體授權]]></title>
       <url>http://yoursite.com/2016/12/11/%E5%BE%AE%E8%BB%9F%E8%BB%9F%E9%AB%94%E6%8E%88%E6%AC%8A/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
