@@ -20,7 +20,8 @@ Oracle的pro：1521
 <hr>
 <h2 id="啓動Run-SQL-Command-Line"><a href="#啓動Run-SQL-Command-Line" class="headerlink" title="啓動Run SQL Command Line"></a>啓動Run SQL Command Line</h2><p>安裝Oracle Server後，會有個SQL的命令字元視窗，雖然介面式的操作很方便，但也還是要知道如何在命令字元視窗下指令。  </p>
 <ul>
-<li><strong>登入</strong><blockquote>
+<li><p><strong>登入</strong></p>
+<blockquote>
 <p><strong>登入指令有兩種：</strong></p>
 <blockquote>
 <p>connect system</p>
