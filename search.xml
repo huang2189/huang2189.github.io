@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title><![CDATA[安裝Oracle Server 及 SQL Developer]]></title>
+      <url>http://yoursite.com/2016/12/18/%E5%AE%89%E8%A3%9DOracle-Server-%E5%8F%8A-SQL-Developer/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+Oracle的pro：1521
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h2 id="下載-Oracle"><a href="#下載-Oracle" class="headerlink" title="下載 Oracle"></a>下載 Oracle</h2><ul>
+<li>在官網下載要先加入會員。</li>
+<li>Oracle Server(Oracle Database Express Edition 11g Release 2)<br><a href="http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html" target="_blank" rel="external">載點</a></li>
+<li>Oracle SQL Developer<br><a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank" rel="external">載點</a></li>
+</ul>
+<hr>
+<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>在安裝Oracle Server的過程中會設定&quot;Specify Database Passwords&quot;，這是系統密碼，要記住。<br>安裝速度很快，也不需要做設定。  </p>
+<hr>
+<h2 id="啓動Run-SQL-Command-Line"><a href="#啓動Run-SQL-Command-Line" class="headerlink" title="啓動Run SQL Command Line"></a>啓動Run SQL Command Line</h2><p>安裝Oracle Server後，會有個SQL的命令字元視窗，雖然介面式的操作很方便，但也還是要知道如何在命令字元視窗下指令。  </p>
+<ul>
+<li><strong>登入</strong><blockquote>
+<p><strong>登入指令有兩種：</strong></p>
+<blockquote>
+<p>connect system</p>
+<pre><code>或是
+</code></pre><p>connect 帳號/密碼</p>
+</blockquote>
+</blockquote>
+</li>
+<li><strong>加入資料庫</strong>
+  將資料庫放在指定的位置後輸入指令<blockquote>
+<p>@ C:\xxxxx.sql</p>
+</blockquote>
+</li>
+<li><strong>建立一個使用者帳號</strong><blockquote>
+<p>CREATE USER [帳號] IDENTIFIED BY [密碼]<br>DEFAULT TABLESPACE users;  </p>
+</blockquote>
+</li>
+</ul>
+<p><strong>註：在這裡不管輸入幾行指令，只要沒有輸入分號(;)，就不會執行</strong></p>
+<ul>
+<li><strong>離開</strong><blockquote>
+<p>exit</p>
+</blockquote>
+</li>
+</ul>
+<hr>
+<h2 id="建立連線"><a href="#建立連線" class="headerlink" title="建立連線"></a>建立連線</h2><p>打開SQL Developer。<br>先新增連線<br>使用者名稱要填 &quot;system  &quot;
+並按測試<br>看是否能連線  </p>
+<p><img src="http://i.imgbox.com/AAMkN8yL.png" alt=""></p>
+<h2 id="授權"><a href="#授權" class="headerlink" title="授權"></a>授權</h2><p>使用者帳號如果沒有授權是無法建立連線。<br>Developer授權方式如下：<br>在system的連線下找到&quot;其他使用者&quot;<br><img src="http://i.imgbox.com/kBocswvi.png" alt="">  </p>
+<p>點開後找到新增的使用者<br>按右鍵--&gt;選&quot;編輯使用者&quot;<br><img src="http://i.imgbox.com/eEICedXF.png" alt="">  </p>
+<p>選擇&quot;授權的角色&quot;下方<br>找到&quot;Conneet&quot;跟&quot;Resource&quot;在已授權的地方打勾<br>再選擇&quot;配額&quot;
+找到users打勾後按&quot;套用&quot;<br><img src="http://i.imgbox.com/aHMGVjy5.png" alt="">  </p>
+<p>接著替使用者建立連線  </p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Sublime Text3 套件]]></title>
       <url>http://yoursite.com/2016/12/18/Sublime-Text3-%E5%A5%97%E4%BB%B6/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
