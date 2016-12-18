@@ -4,6 +4,62 @@
   
     
     <entry>
+      <title><![CDATA[Sublime Text3 套件]]></title>
+      <url>http://yoursite.com/2016/12/18/Sublime-Text3-%E5%A5%97%E4%BB%B6/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h1 id="中文編碼：ConvertToUTF8"><a href="#中文編碼：ConvertToUTF8" class="headerlink" title="中文編碼：ConvertToUTF8"></a>中文編碼：ConvertToUTF8</h1><p> Sublime Text 3 預設不支援中文編碼，所以需要安裝ConvertToUTF8套件來解決這個問題。  </p>
+<hr>
+<h1 id="Emmet"><a href="#Emmet" class="headerlink" title="Emmet"></a>Emmet</h1><p>它能加快並縮短開發者在編寫 HTML 及 CSS 的時間，例如：<br>打h1就會有h1的標籤出現。  </p>
+<hr>
+<h1 id="模版：Sublime-tmpl"><a href="#模版：Sublime-tmpl" class="headerlink" title="模版：Sublime tmpl"></a>模版：Sublime tmpl</h1><p>常見的快捷鍵  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">ctrl+alt+h html</div><div class="line">ctrl+alt+j javascript</div><div class="line">ctrl+alt+c css</div><div class="line">ctrl+alt+p php</div><div class="line">ctrl+alt+r ruby</div><div class="line">ctrl+alt++shift+p python</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="提示字元：AutoFileName"><a href="#提示字元：AutoFileName" class="headerlink" title="提示字元：AutoFileName"></a>提示字元：AutoFileName</h1><p>在輸入字元時，會自動帶出可輸入的檔案之提示框。  </p>
+<hr>
+<h1 id="SublimeCodeIntel"><a href="#SublimeCodeIntel" class="headerlink" title="SublimeCodeIntel"></a>SublimeCodeIntel</h1><p><strong>基本 SublimeCodeIntel 功能</strong></p>
+<ul>
+<li>程式碼提示 -&gt; 輸入程式碼時自動跳出提示語法視窗</li>
+<li>程式碼追蹤(導向變數原始宣告、函數原始宣告、類別原始宣告、類別函數原始宣告…等) -&gt; 快捷鍵 Control + 滑鼠左鍵 直接追蹤原始宣告的所在檔案與行數，在PHP中如果不是本檔案 require 來源的變數則無法追蹤。  </li>
+</ul>
+<hr>
+<h1 id="高亮：colorhighlighter"><a href="#高亮：colorhighlighter" class="headerlink" title="高亮：colorhighlighter"></a>高亮：colorhighlighter</h1><hr>
+<h1 id="假文：ChineseLoremlpsum"><a href="#假文：ChineseLoremlpsum" class="headerlink" title="假文：ChineseLoremlpsum"></a>假文：ChineseLoremlpsum</h1><p>簡體：clorem+[alt+c]。指定字量：clorem+數字
+繁體：ctlorem+[alt+c]。指定字量：clorem+數字
+英文：lorem+[Tab鍵]。指定字量：lorem+數字+[Tab鍵]</p>
+<hr>
+<h1 id="假圖fakeimg"><a href="#假圖fakeimg" class="headerlink" title="假圖fakeimg"></a>假圖fakeimg</h1><p>fakeimg+[Tab鍵]
+說明：圖片網址/圖片尺寸/圖片色彩/文字色彩/?=text圖片文字  </p>
+<p>去掉?=text圖片文字則圖片內容為尺寸  </p>
+<p>圖片文字只能輸入英文  </p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
+      <title><![CDATA[安裝Sublime Text3]]></title>
+      <url>http://yoursite.com/2016/12/18/%E5%AE%89%E8%A3%9DSublime-Text3/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h1 id="下載"><a href="#下載" class="headerlink" title="下載"></a>下載</h1><p>下載<a href="https://www.sublimetext.com/3" target="_blank" rel="external">SublimeText3</a>  </p>
+<h1 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h1><p>沒有特別要設定的</p>
+<hr>
+<h1 id="安裝套件-package-control-重要"><a href="#安裝套件-package-control-重要" class="headerlink" title="安裝套件--package control(重要)"></a>安裝套件--package control(重要)</h1><p>要有這個套件，才可以擴充其他套件。<br>連接<a href="https://packagecontrol.io/" target="_blank" rel="external">package control</a>  </p>
+<p><img src="https://i.imgbox.com/fazwpb0d.png" alt=""><br>點選SUBLIME TEXT 3的頁籤，將code拷貝出來。
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">import urllib.request,os,hashlib; h = &apos;df21e130d211cfc94d9b0905775a7c0f&apos; + &apos;1e3d39e33b79698005270310898eea76&apos;; pf = &apos;Package Control.sublime-package&apos;; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( &apos;http://packagecontrol.io/&apos; + pf.replace(&apos; &apos;, &apos;%20&apos;)).read(); dh = hashlib.sha256(by).hexdigest(); print(&apos;Error validating download (got %s instead of %s), please try manual install&apos; % (dh, h)) if dh != h else open(os.path.join( ipp, pf), &apos;wb&apos; ).write(by)</div></pre></td></tr></table></figure></p>
+<p>打開Sublime Text3，按 <strong>Ctrl + `</strong>，下方會有個輸入框，將code拷貝進去，然後按Enter。  </p>
+<p><img src="https://i.imgbox.com/Cf6ht5yP.png" alt="">  </p>
+<p>然後按<code>Ctrl</code> + <code>Shift</code> + <code>P</code>，會出現下方的圖  </p>
+<p><img src="https://i.imgbox.com/2wfQTu3h.png" alt="">   </p>
+<p>有出現<code>Package control:Install Package</code>就表示安裝成功。  </p>
+<p>輸入<code>Package control:Install Package</code>以後就可以安裝其他套件了。  </p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[windows7升級成windows10之後的問題]]></title>
       <url>http://yoursite.com/2016/12/16/windows7%E5%8D%87%E7%B4%9A%E6%88%90windows10%E4%B9%8B%E5%BE%8C%E7%9A%84%E5%95%8F%E9%A1%8C/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
