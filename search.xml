@@ -4,6 +4,50 @@
   
     
     <entry>
+      <title><![CDATA[資料庫與檔案系統比較]]></title>
+      <url>http://yoursite.com/2016/12/19/%E8%B3%87%E6%96%99%E5%BA%AB%E8%88%87%E6%AA%94%E6%A1%88%E7%B3%BB%E7%B5%B1%E6%AF%94%E8%BC%83/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h2 id="資料庫與檔案系統比較"><a href="#資料庫與檔案系統比較" class="headerlink" title="資料庫與檔案系統比較"></a>資料庫與檔案系統比較</h2><p>目前有兩種常見資料處理系統：一是檔案系統，另一是資料庫系統。  </p>
+<p>檔案系統是以「<strong>檔案為導向</strong>」的方法，<strong>一次只能處理一個檔案</strong>，無法同時處理多個檔案，所以它適用在「<strong>不複雜</strong>」的場合使用。在複雜的環境中，若是每個應用系統都有自己的所屬檔案，那麼資料便有重覆存放、不一致的問題發生，就須要使用<strong>資料庫系統</strong>。  </p>
+<hr>
+<h2 id="檔案系統"><a href="#檔案系統" class="headerlink" title="檔案系統"></a>檔案系統</h2><p>「<strong>檔案處理系統(File processing system)</strong>」是依個自需求而成的，每一套程式和檔案皆自成一個系統，彼此互為<strong>獨立</strong>。各檔案處理系統彼此之間互不相關，所以各系統所使用的程式語言與檔案結構可能會不同，也增加了系統維護的困難度。當有新的需求產生時，便須撰寫新的程式和建立新的檔案，會造成資料重覆與資料不一致的問題，因此，檔案系統逐漸為資料庫所取代。</p>
+<p><strong>【優點】</strong></p>
+<ol>
+<li>程式的設計方式相當單純。</li>
+<li>檔案系統較容易滿足各部門或應用系統之要求。
+<strong>【缺點】</strong></li>
+<li>資料之重覆性高。</li>
+<li>資料不一致性</li>
+<li>資料無法整合及共享</li>
+<li>資料保密性和安全性非常低(資料庫有安全機制)</li>
+<li>資料與程式高度相依</li>
+<li>漫長的開發時間</li>
+<li>大量的程式維護工作</li>
+</ol>
+<hr>
+<h2 id="資料庫系統"><a href="#資料庫系統" class="headerlink" title="資料庫系統"></a>資料庫系統</h2><p>資料庫系統是將所有相關的資料都利用一樣的資料結構儲存於資料庫中，讓不同的使用者皆可利用資料庫的資料來發展所需的應用程式。所以，即使有新的需求產生，當所需的資料已存在原資料庫時，則使用者便可直接利用原資料庫的資料以發展所需要的程式。資料庫系統強調資料處理應該是「<strong>集中化</strong>」且「<strong>整合性</strong>」的來存取資料，可對資料做「<strong>安全性</strong>」、「<strong>整合性</strong>」等管理。
+<strong>【優點】</strong></p>
+<ol>
+<li>避免資料之重覆</li>
+<li>達成資料一致性</li>
+<li>達成資料整合及共享</li>
+<li>加強制定之標準化</li>
+<li>完成資料之保密性和安全性</li>
+<li>資料獨立性
+<strong>【缺點】</strong></li>
+<li>初期投資成本較高，例如DBMS昂貴。</li>
+<li>資料庫管理師(DBA)人才難尋。</li>
+<li>採集中控制，在意外狀況時，容易造成重大災害。</li>
+<li>作業成本較高。</li>
+<li>為了提供安全性、同步控制、復原機制與整合性，比較花費大量資源。</li>
+</ol>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[HTML字符實體（Character Entities），轉義字符串（Escape Sequence)]]></title>
       <url>http://yoursite.com/2016/12/19/HTML%E5%AD%97%E7%AC%A6%E5%AF%A6%E9%AB%94%EF%BC%88Character-Entities%EF%BC%89%EF%BC%8C%E8%BD%89%E7%BE%A9%E5%AD%97%E7%AC%A6%E4%B8%B2%EF%BC%88Escape-Sequence/</url>
       <content type="html"><![CDATA[<p>特殊符號，在任何編碼的方式下，還能正常的顯示。</p>
@@ -18,7 +62,7 @@
 <p><strong>轉義字符串的組成</strong>
 轉義字符串（Escape Sequence），即字符實體（Character Entity）分成三部分：  </p>
 <p>第一部分是一個&amp;符號，英文叫ampersand；<br>第二部分是實體（Entity）名字或者是#加上實體（Entity）編號；<br>第三部分是一個分號。  </p>
-<p>例如，要顯示小於符號（&lt;），就可以寫 &lt; 或者 &#60; 。  </p>
+<p>例如，要顯示小於符號（&lt;），就可以寫 <code>&amp;lt;</code> 或者 <code>&amp;#60;</code> 。  </p>
 <p>用實體（Entity）名字的好處是比較好理解，一看lt，大概就猜出是less than的意思，但是其劣勢在於並不是所有的瀏覽器都支持最新的Entity名字。而實體(Entity)編號，各種瀏覽器都能處理。  </p>
 <p><strong>提示</strong>：實體名稱（Entity）是區分大小寫的。  </p>
 <p><strong>備注</strong>：同一個符號，可以用“實體名稱”和“實體編號”兩種方式引用，“實體名稱”的優勢在於便於記憶，但不能保證所有的瀏覽器都能順利識別它，而“實體編號”則沒有這種擔憂，但它實在不方便記憶。  </p>
