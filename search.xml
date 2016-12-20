@@ -9,7 +9,8 @@
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<h2 id="資料庫與檔案系統比較"><a href="#資料庫與檔案系統比較" class="headerlink" title="資料庫與檔案系統比較"></a>資料庫與檔案系統比較</h2><p>目前有兩種常見資料處理系統：一是檔案系統，另一是資料庫系統。  </p>
+<h2 id="資料庫與檔案系統比較"><a href="#資料庫與檔案系統比較" class="headerlink" title="資料庫與檔案系統比較"></a>資料庫與檔案系統比較</h2><font color="red">目前有兩種常見資料處理系統：一是檔案系統，另一是資料庫系統。 </font> 
+
 <p>檔案系統是以「<strong>檔案為導向</strong>」的方法，<strong>一次只能處理一個檔案</strong>，無法同時處理多個檔案，所以它適用在「<strong>不複雜</strong>」的場合使用。在複雜的環境中，若是每個應用系統都有自己的所屬檔案，那麼資料便有重覆存放、不一致的問題發生，就須要使用<strong>資料庫系統</strong>。  </p>
 <hr>
 <h2 id="檔案系統"><a href="#檔案系統" class="headerlink" title="檔案系統"></a>檔案系統</h2><p>「<strong>檔案處理系統(File processing system)</strong>」是依個自需求而成的，每一套程式和檔案皆自成一個系統，彼此互為<strong>獨立</strong>。各檔案處理系統彼此之間互不相關，所以各系統所使用的程式語言與檔案結構可能會不同，也增加了系統維護的困難度。當有新的需求產生時，便須撰寫新的程式和建立新的檔案，會造成資料重覆與資料不一致的問題，因此，檔案系統逐漸為資料庫所取代。  </p>
