@@ -9,7 +9,7 @@
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<h1 id="關聯式資料庫管理系統-RDBMS"><a href="#關聯式資料庫管理系統-RDBMS" class="headerlink" title="關聯式資料庫管理系統(RDBMS)"></a>關聯式資料庫管理系統(RDBMS)</h1><ul>
+<h2 id="關聯式資料庫管理系統-RDBMS"><a href="#關聯式資料庫管理系統-RDBMS" class="headerlink" title="關聯式資料庫管理系統(RDBMS)"></a>關聯式資料庫管理系統(RDBMS)</h2><ul>
 <li>1970年由Dr.E.F.Codd提出的關聯式資料模型發展出來的資料庫管理系統。</li>
 <li>關聯式資料模型主要組成：<table border="1">
       <tr>
@@ -125,19 +125,21 @@
 <hr>
 <h2 id="作業"><a href="#作業" class="headerlink" title="作業"></a>作業</h2><ul>
 <li>安裝Oracle Server 及SQL Developer。</li>
-<li><p>使用Run SQL Command Line以系統管理者帳號(system)登入系統。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect system/密碼</div></pre></td></tr></table></figure>
-</li>
-<li><p>建立一個新的使用者帳號。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create user 帳號 identified by 密碼 default tablespace users;</div></pre></td></tr></table></figure>
-</li>
-<li><p>使用新的使用者帳號登入系統。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect 帳號/密碼</div></pre></td></tr></table></figure>
-</li>
-<li><p>加入新的資料庫。</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@ C:\xxxx.sql</div></pre></td></tr></table></figure>
-</li>
+<li>使用Run SQL Command Line以系統管理者帳號(system)登入系統。</li>
 </ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect system/密碼</div></pre></td></tr></table></figure>
+<ul>
+<li>建立一個新的使用者帳號。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">create user 帳號 identified by 密碼 default tablespace users;</div></pre></td></tr></table></figure>
+<ul>
+<li>使用新的使用者帳號登入系統。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">connect 帳號/密碼</div></pre></td></tr></table></figure>
+<ul>
+<li>加入新的資料庫。</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">@ C:\xxxx.sql</div></pre></td></tr></table></figure>
 <hr>
 <p>操作存成文字檔：
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">spool 路徑\檔名 ( 開始前 )</div><div class="line">spool off ( 結束後 )</div></pre></td></tr></table></figure></p>
