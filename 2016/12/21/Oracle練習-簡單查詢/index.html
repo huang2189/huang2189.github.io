@@ -16,19 +16,12 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="SQL Server 安裝">
-<meta property="og:url" content="http://yoursite.com/2016/12/10/SQL-Server-安裝/index.html">
+<meta property="og:title" content="Oracle練習--簡單查詢">
+<meta property="og:url" content="http://yoursite.com/2016/12/21/Oracle練習-簡單查詢/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:image" content="https://i.imgbox.com/A6e4VNQd.png">
-<meta property="og:image" content="https://i.imgbox.com/VJxjkGvR.png">
-<meta property="og:image" content="https://i.imgbox.com/GS8g2eEj.png">
-<meta property="og:image" content="https://i.imgbox.com/FQKdKovG.png">
-<meta property="og:image" content="https://i.imgbox.com/I0L8omkT.png">
-<meta property="og:image" content="https://i.imgbox.com/Cz1Sm9FF.png">
-<meta property="og:updated_time" content="2016-12-10T13:03:46.057Z">
+<meta property="og:updated_time" content="2016-12-21T16:26:54.705Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="SQL Server 安裝">
-<meta name="twitter:image" content="https://i.imgbox.com/A6e4VNQd.png">
+<meta name="twitter:title" content="Oracle練習--簡單查詢">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -60,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>SQL Server 安裝 | ░ 菜鳥 ░</title>
+<title>Oracle練習--簡單查詢 | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -271,11 +264,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-SQL-Server-安裝" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Oracle練習-簡單查詢" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/10/SQL-Server-安裝/" class="article-date">
-      <time datetime="2016-12-10T13:02:42.000Z" itemprop="datePublished">2016-12-10</time>
+      <a href="/2016/12/21/Oracle練習-簡單查詢/" class="article-date">
+      <time datetime="2016-12-21T16:26:16.000Z" itemprop="datePublished">2016-12-21</time>
 </a>
 
 
@@ -290,7 +283,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      SQL Server 安裝
+      Oracle練習--簡單查詢
     </h1>
   
 
@@ -305,7 +298,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/MSSQL/">MSSQL</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle練習/">oracle練習</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -317,18 +310,16 @@
           
         <p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 全文="">
-
-<p>一般安裝，都是直接按下一步，沒有特別要設定，都是預設的。  </p>
-<p>如果是新按裝，請選擇&quot;新增SQL Server 獨立安裝或將功能加入至現有安裝。  </p>
-<p><img src="https://i.imgbox.com/A6e4VNQd.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/VJxjkGvR.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/GS8g2eEj.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/FQKdKovG.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/I0L8omkT.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/Cz1Sm9FF.png" alt="">  </p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h3 id="顯示某資料表-dept-的結構"><a href="#顯示某資料表-dept-的結構" class="headerlink" title="顯示某資料表(dept)的結構"></a>顯示某資料表(dept)的結構</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">describe</span> dept;</div><div class="line"></div><div class="line">//結果</div><div class="line"><span class="keyword">describe</span> dept</div><div class="line">名稱     空值       類型           </div><div class="line"><span class="comment">------ -------- ------------ </span></div><div class="line">DEPTNO <span class="keyword">NOT</span> <span class="literal">NULL</span> <span class="built_in">NUMBER</span>(<span class="number">2</span>)    </div><div class="line">DNAME           VARCHAR2(<span class="number">14</span>) </div><div class="line">LOC             VARCHAR2(<span class="number">13</span>)</div></pre></td></tr></table></figure>
+<h3 id="查詢某資料表的所有資料"><a href="#查詢某資料表的所有資料" class="headerlink" title="查詢某資料表的所有資料"></a>查詢某資料表的所有資料</h3><figure class="highlight sql"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">select</span> * <span class="keyword">from</span> dept;</div><div class="line"></div><div class="line">//結果</div><div class="line">DEPTNO                 DNAME          LOC           </div><div class="line"><span class="comment">---------------------- -------------- ------------- </span></div><div class="line">10                     ACCOUNTING     NEW YORK      </div><div class="line">20                     RESEARCH       DALLAS        </div><div class="line">30                     SALES          CHICAGO       </div><div class="line">40                     OPERATIONS     BOSTON</div></pre></td></tr></table></figure>
+<h3 id="顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面"><a href="#顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面" class="headerlink" title="顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面"></a>顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT empno &quot;employee number&quot;,ename name,job,hiredate &quot;hire date&quot;</div><div class="line">FROM emp;</div><div class="line"></div><div class="line">//結果</div><div class="line">employee number NAME       JOB       hire date</div><div class="line">--------------- ---------- --------- ---------</div><div class="line">           7839 KING       PRESIDENT 17-11月-81</div><div class="line">           7698 BLAKE      MANAGER   01-5月 -81</div><div class="line">           7782 CLARK      MANAGER   09-6月 -81</div></pre></td></tr></table></figure>
+<h3 id="員工職稱有哪些-不能重覆"><a href="#員工職稱有哪些-不能重覆" class="headerlink" title="員工職稱有哪些?(不能重覆)"></a>員工職稱有哪些?(不能重覆)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">SELECT DISTINCT job</div><div class="line">FROM  emp;</div><div class="line"></div><div class="line">//結果</div><div class="line">JOB     </div><div class="line">---------</div><div class="line">SALESMAN </div><div class="line">CLERK    </div><div class="line">PRESIDENT</div><div class="line">MANAGER  </div><div class="line">ANALYST</div></pre></td></tr></table></figure>
+<h3 id="顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面，並重新命名，Emp-Employee-Job-Hire-Date"><a href="#顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面，並重新命名，Emp-Employee-Job-Hire-Date" class="headerlink" title="顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面，並重新命名，Emp#,Employee,Job, Hire Date."></a>顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面，並重新命名，Emp#,Employee,Job, Hire Date.</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT empno &quot;Emp#&quot;,ename &quot;Employee&quot;,job &quot;Job&quot;,hiredate &quot;Hire Date&quot;</div><div class="line">FROM emp;</div><div class="line">//結果</div><div class="line">Emp# Employee   Job       Hire Date</div><div class="line">---------- ---------- --------- ---------</div><div class="line">      7839 KING       PRESIDENT 17-11月-81</div><div class="line">      7698 BLAKE      MANAGER   01-5月 -81</div><div class="line">      7782 CLARK      MANAGER   09-6月 -81</div></pre></td></tr></table></figure>
+<h3 id="將姓名及職稱串接為一個資料項-資料中間利用一個空白和一個逗號做區隔-，並將表頭重新命名為Employee-and-Title。"><a href="#將姓名及職稱串接為一個資料項-資料中間利用一個空白和一個逗號做區隔-，並將表頭重新命名為Employee-and-Title。" class="headerlink" title="將姓名及職稱串接為一個資料項(資料中間利用一個空白和一個逗號做區隔)，並將表頭重新命名為Employee and Title。"></a>將姓名及職稱串接為一個資料項(資料中間利用一個空白和一個逗號做區隔)，並將表頭重新命名為Employee and Title。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT ename||&apos; , &apos;||job &quot;Employee and Title&quot;</div><div class="line">FROM emp;</div><div class="line">//結果</div><div class="line">Employee and Title   </div><div class="line">----------------------</div><div class="line">KING , PRESIDENT      </div><div class="line">BLAKE , MANAGER       </div><div class="line">CLARK , MANAGER</div></pre></td></tr></table></figure>
+<h3 id="顯示目前系統的日期"><a href="#顯示目前系統的日期" class="headerlink" title="顯示目前系統的日期"></a>顯示目前系統的日期</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT SYSDATE</div><div class="line">FROM DUAL;</div><div class="line"></div><div class="line">//結果</div><div class="line">SYSDATE </div><div class="line">---------</div><div class="line">22-12月-16</div></pre></td></tr></table></figure>
 <hr>
-</the>
+
       
     </div>
     
@@ -336,13 +327,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/12/10/SQL-Server-安裝/">SQL Server 安裝</a></p>
+        <p><span>本文標題:</span><a href="/2016/12/21/Oracle練習-簡單查詢/">Oracle練習--簡單查詢</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
-        <p><span>發布時間:</span>2016-12-10, 13:02:42</p>
-        <p><span>最後更新:</span>2016-12-10, 13:03:46</p>
+        <p><span>發布時間:</span>2016-12-21, 16:26:16</p>
+        <p><span>最後更新:</span>2016-12-21, 16:26:54</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/12/10/SQL-Server-安裝/" title="SQL Server 安裝">http://yoursite.com/2016/12/10/SQL-Server-安裝/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/10/SQL-Server-安裝/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/12/21/Oracle練習-簡單查詢/" title="Oracle練習--簡單查詢">http://yoursite.com/2016/12/21/Oracle練習-簡單查詢/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/21/Oracle練習-簡單查詢/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -354,16 +345,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/11/微軟軟體授權/">
-                    微軟軟體授權
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/08/Eclipse-常用的快捷鍵/">
-                    Eclipse 常用的快捷鍵
+                <a href="/2016/12/21/Oracle資料查詢-簡單查詢/">
+                    Oracle資料查詢--簡單查詢
                 </a>
             </div>
         
@@ -375,7 +360,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#顯示某資料表-dept-的結構"><span class="toc-number">1.</span> <span class="toc-text">顯示某資料表(dept)的結構</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#查詢某資料表的所有資料"><span class="toc-number">2.</span> <span class="toc-text">查詢某資料表的所有資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面"><span class="toc-number">3.</span> <span class="toc-text">顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#員工職稱有哪些-不能重覆"><span class="toc-number">4.</span> <span class="toc-text">員工職稱有哪些?(不能重覆)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#顯示每一位員工的姓名-name-、職稱-job-、進公司日期-hire-date-及員工編號-employee-number-，員工編號要在最前面，並重新命名，Emp-Employee-Job-Hire-Date"><span class="toc-number">5.</span> <span class="toc-text">顯示每一位員工的姓名(name)、職稱(job)、進公司日期(hire date)及員工編號(employee number)，員工編號要在最前面，並重新命名，Emp#,Employee,Job, Hire Date.</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#將姓名及職稱串接為一個資料項-資料中間利用一個空白和一個逗號做區隔-，並將表頭重新命名為Employee-and-Title。"><span class="toc-number">6.</span> <span class="toc-text">將姓名及職稱串接為一個資料項(資料中間利用一個空白和一個逗號做區隔)，並將表頭重新命名為Employee and Title。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#顯示目前系統的日期"><span class="toc-number">7.</span> <span class="toc-text">顯示目前系統的日期</span></a></li></ol>
         
     </div>
     <style>
@@ -411,7 +396,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"SQL Server 安裝　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Oracle練習--簡單查詢　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -427,7 +412,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/10/SQL-Server-安裝/" data-title="SQL Server 安裝" data-url="http://yoursite.com/2016/12/10/SQL-Server-安裝/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/21/Oracle練習-簡單查詢/" data-title="Oracle練習--簡單查詢" data-url="http://yoursite.com/2016/12/21/Oracle練習-簡單查詢/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -450,15 +435,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/11/微軟軟體授權/" title="上一篇: 微軟軟體授權">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/08/Eclipse-常用的快捷鍵/" title="下一篇: Eclipse 常用的快捷鍵">
+            <a href="/2016/12/21/Oracle資料查詢-簡單查詢/" title="下一篇: Oracle資料查詢--簡單查詢">
                 <i class="fa fa-angle-right"></i>
             </a>
         
