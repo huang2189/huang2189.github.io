@@ -1500,7 +1500,7 @@ color
   color: #66be66;
   padding-bottom: 5px;
   border-bottom: 1px solid #ddd;
-  text-align: center;
+  text-align: left;
   font-size: 1.5rem;
 }
 .article-entry h2:hover {
