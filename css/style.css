@@ -1509,7 +1509,7 @@ color
 .article-entry h2::before,
 .article-entry h2::after {
   content: "";
-  font-family: 微軟正黑體;
+  font-family: Arial;
 }
 .article-entry h3 {
   margin: 0.5em auto;
