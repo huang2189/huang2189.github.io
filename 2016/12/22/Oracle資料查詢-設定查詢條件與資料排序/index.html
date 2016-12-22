@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+
+    <!--[if lt IE 9]>
+        <style>body {display: none; background: none !important} </style>
+        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
+    <![endif]-->
+
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="format-detection" content="telephone=no" />
+<meta name="author" content="Huang2189" />
+
+
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle資料查詢--設定查詢條件與資料排序">
+<meta property="og:url" content="http://yoursite.com/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/index.html">
+<meta property="og:site_name" content="░ 菜鳥 ░">
+<meta property="og:image" content="https://i.imgbox.com/Mc9hY2E9.png">
+<meta property="og:image" content="https://i.imgbox.com/P7hiVRTM.png">
+<meta property="og:image" content="https://i.imgbox.com/sJnj8jiA.png">
+<meta property="og:image" content="https://i.imgbox.com/qGL8v6IL.png">
+<meta property="og:updated_time" content="2016-12-22T15:38:35.339Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Oracle資料查詢--設定查詢條件與資料排序">
+<meta name="twitter:image" content="https://i.imgbox.com/Mc9hY2E9.png">
+
+<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
+
+
+    <link rel="alternate" href="/atom.xml" title="░ 菜鳥 ░" type="application/atom+xml">
+
+
+
+    <link rel="shortcut icon" href="/favicon.png">
+
+
+
+    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
+
+
+
+    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
+
+
+
+    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
+
+
+<title>Oracle資料查詢--設定查詢條件與資料排序 | ░ 菜鳥 ░</title>
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+<script>
+    var yiliaConfig = {
+        fancybox: true,
+        animate: true,
+        isHome: false,
+        isPost: true,
+        isArchive: false,
+        isTag: false,
+        isCategory: false,
+        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
+        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
+        search: true
+    }
+</script>
+
+
+    <script> yiliaConfig.jquery_ui = [false]; </script>
+
+
+
+    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+
+
+
+
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">Huang2189</a></h1>
+        </hgroup>
+
+        
+        <p class="header-subtitle">學不停</p>
+        
+
+        
+            <form id="search-form">
+            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="true" />
+            <i class="fa fa-times" onclick="resetSearch()"></i>
+            </form>
+            <div id="local-search-result"></div>
+            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
+        
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜單</li>
+                        <li>標籤</li>
+                        
+                        <li>友情鏈接</li>
+                        
+                        
+                        <li>關於我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主頁</a></li>
+                        
+                            <li><a href="/archives/">文章</a></li>
+                        
+                            <li><a href="/tags/">標籤</a></li>
+                        
+                            <li><a href="/about/">關於我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Eclipse/">Eclipse</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/HTML/">HTML</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hexo/">Hexo</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/MSSQL/">MSSQL</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/SublimeText3/">SublimeText3</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle/">oracle</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle-11g/">oracle_11g</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/oracle練習/">oracle練習</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows10/">windows10</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/windows7/">windows7</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/軟體授權/">軟體授權</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/錯誤訊息/">錯誤訊息</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/雜項/">雜項</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/面試/">面試</a></li></ul>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">學習中...</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Huang2189</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">Huang2189</a></h1>
+            </hgroup>
+            
+            <p class="header-subtitle">學不停</p>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主頁</a></li>
+                
+                    <li><a href="/archives/">文章</a></li>
+                
+                    <li><a href="/tags/">標籤</a></li>
+                
+                    <li><a href="/about/">關於我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <a class="fa Email" target="_blank" href="mailto:123@123.com" title="Email"></a>
+                            
+                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
+                            
+                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+    <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
+</nav>
+      <div class="body-wrap"><article id="post-Oracle資料查詢-設定查詢條件與資料排序" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/" class="article-date">
+      <time datetime="2016-12-22T15:35:34.000Z" itemprop="datePublished">2016-12-22</time>
+</a>
+
+
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Oracle資料查詢--設定查詢條件與資料排序
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/資料庫/">資料庫</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h2 id="SQL命令的分類"><a href="#SQL命令的分類" class="headerlink" title="SQL命令的分類"></a>SQL命令的分類</h2><p><img src="https://i.imgbox.com/Mc9hY2E9.png" alt="">  </p>
+<hr>
+<h2 id="資料查詢"><a href="#資料查詢" class="headerlink" title="資料查詢"></a>資料查詢</h2><p><img src="https://i.imgbox.com/P7hiVRTM.png" alt="">  </p>
+<hr>
+<h2 id="過濾資料列-WHERE子句"><a href="#過濾資料列-WHERE子句" class="headerlink" title="過濾資料列--WHERE子句"></a>過濾資料列--WHERE子句</h2><h3 id="未過濾"><a href="#未過濾" class="headerlink" title="未過濾"></a>未過濾</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno</div><div class="line">FROM emp;</div><div class="line"></div><div class="line">ENAME      JOB           DEPTNO</div><div class="line">---------- --------- ----------</div><div class="line">KING       PRESIDENT         10</div><div class="line">BLAKE      MANAGER           30</div><div class="line">CLARK      MANAGER           10</div><div class="line">JONES      MANAGER           20</div></pre></td></tr></table></figure>
+<h3 id="過濾-deptno只留10的"><a href="#過濾-deptno只留10的" class="headerlink" title="過濾--deptno只留10的"></a>過濾--deptno只留10的</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno</div><div class="line">FROM emp</div><div class="line">WHERE deptno = 10;</div><div class="line"></div><div class="line">ENAME      JOB           DEPTNO</div><div class="line">---------- --------- ----------</div><div class="line">KING       PRESIDENT         10</div><div class="line">CLARK      MANAGER           10</div></pre></td></tr></table></figure>
+<h2 id="WHERE子句說明"><a href="#WHERE子句說明" class="headerlink" title="WHERE子句說明"></a>WHERE子句說明</h2><ul>
+<li>只有當條件子句結果為真時，才會將該筆資料傳回。</li>
+<li>條件子句：<ul>
+<li>邏輯條件</li>
+<li>比較運算式</li>
+<li>邏輯運算式</li>
+<li>SQL特定運算式</li>
+</ul>
+</li>
+</ul>
+<h3 id="邏輯條件"><a href="#邏輯條件" class="headerlink" title="邏輯條件"></a>邏輯條件</h3><p>真(True)/假(False)/NULL  </p>
+<h3 id="比較運算式"><a href="#比較運算式" class="headerlink" title="比較運算式"></a>比較運算式</h3><p><img src="https://i.imgbox.com/sJnj8jiA.png" alt="">  </p>
+<h4 id="字串資料-找出JAMES的資料"><a href="#字串資料-找出JAMES的資料" class="headerlink" title="字串資料--找出JAMES的資料"></a>字串資料--找出JAMES的資料</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno,sal</div><div class="line">FROM emp</div><div class="line">WHERE ename = &apos;JAMES&apos;;</div><div class="line">==========================================</div><div class="line">ENAME      JOB           DEPTNO        SAL</div><div class="line">---------- --------- ---------- ----------</div><div class="line">JAMES      CLERK             30        950</div></pre></td></tr></table></figure>
+<h4 id="數值資料-找出薪資大於或等於2000"><a href="#數值資料-找出薪資大於或等於2000" class="headerlink" title="數值資料 -- 找出薪資大於或等於2000"></a>數值資料 -- 找出薪資大於或等於2000</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal &gt;= 2000;</div><div class="line">===========================</div><div class="line">ENAME      JOB           DEPTNO        SAL</div><div class="line">---------- --------- ---------- ----------</div><div class="line">KING       PRESIDENT         10       5000</div><div class="line">BLAKE      MANAGER           30       2850</div><div class="line">CLARK      MANAGER           10       2450</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">//找出薪水小於佣金的</div><div class="line">SELECT ename,sal,comm</div><div class="line">FROM emp</div><div class="line">WHERE sal&lt;=comm;</div><div class="line">======================</div><div class="line">ENAME             SAL       COMM</div><div class="line">---------- ---------- ----------</div><div class="line">MARTIN           1250       1400</div></pre></td></tr></table></figure>
+<h4 id="日期時間資料-1981以後加入公司的"><a href="#日期時間資料-1981以後加入公司的" class="headerlink" title="日期時間資料 -- 1981以後加入公司的"></a>日期時間資料 -- 1981以後加入公司的</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno,sal,hiredate</div><div class="line">FROM emp</div><div class="line">WHERE hiredate &gt; &apos;01-1月-81&apos;;</div><div class="line">====================================</div><div class="line">ENAME      JOB           DEPTNO        SAL HIREDATE</div><div class="line">---------- --------- ---------- ---------- ---------</div><div class="line">KING       PRESIDENT         10       5000 17-11月-81</div><div class="line">BLAKE      MANAGER           30       2850 01-5月 -81</div><div class="line">CLARK      MANAGER           10       2450 09-6月 -81</div></pre></td></tr></table></figure>
+<h3 id="邏輯運算子"><a href="#邏輯運算子" class="headerlink" title="邏輯運算子"></a>邏輯運算子</h3><p><img src="https://i.imgbox.com/qGL8v6IL.png" alt="">  </p>
+<h4 id="AND必須二個運算元都是True才會符合查詢條件"><a href="#AND必須二個運算元都是True才會符合查詢條件" class="headerlink" title="AND必須二個運算元都是True才會符合查詢條件"></a>AND必須二個運算元都是True才會符合查詢條件</h4><p><strong>薪資大於等於1100 AND 職稱為clerk</strong>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">SELECT empno,ename,job,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal&gt;=1000 AND job=&apos;CLERK&apos;;</div><div class="line">==================================</div><div class="line">EMPNO ENAME      JOB              SAL</div><div class="line">---------- ---------- --------- ----------</div><div class="line">      7876 ADAMS      CLERK           1100</div><div class="line">      7934 MILLER     CLERK           1300</div></pre></td></tr></table></figure>
+<h4 id="OR-只要有一個運算元是True就符合查詢條件"><a href="#OR-只要有一個運算元是True就符合查詢條件" class="headerlink" title="OR -- 只要有一個運算元是True就符合查詢條件"></a>OR -- 只要有一個運算元是True就符合查詢條件</h4><p><strong>薪資大於等於1100 或 職稱為clerk</strong>  </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">SELECT empno,ename,job,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal&gt;=1000 OR job=&apos;CLERK&apos;;</div><div class="line">==========================================</div><div class="line">EMPNO ENAME      JOB              SAL</div><div class="line">---------- ---------- --------- ----------</div><div class="line">      7839 KING       PRESIDENT       5000</div><div class="line">      7698 BLAKE      MANAGER         2850</div><div class="line">      7782 CLARK      MANAGER         2450</div><div class="line">      7566 JONES      MANAGER         2975</div><div class="line">      7654 MARTIN     SALESMAN        1250</div><div class="line">      7499 ALLEN      SALESMAN        1600</div><div class="line">      7844 TURNER     SALESMAN        1500</div><div class="line">      7900 JAMES      CLERK            950</div><div class="line">      7521 WARD       SALESMAN        1250</div><div class="line">      7902 FORD       ANALYST         3000</div><div class="line">      7369 SMITH      CLERK            800</div><div class="line">      7788 SCOTT      ANALYST         3000</div><div class="line">      7876 ADAMS      CLERK           1100</div><div class="line">      7934 MILLER     CLERK           1300</div><div class="line"></div><div class="line"> 已選取 14 個資料列</div></pre></td></tr></table></figure>
+<h4 id="NOT-反向運算"><a href="#NOT-反向運算" class="headerlink" title="NOT -- 反向運算"></a>NOT -- 反向運算</h4><p><strong>取出職稱非CLERK的</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,sal</div><div class="line">FROM emp</div><div class="line">WHERE NOT job=&apos;CLERK&apos;;</div><div class="line">===========================</div><div class="line">ENAME      JOB              SAL</div><div class="line">---------- --------- ----------</div><div class="line">KING       PRESIDENT       5000</div><div class="line">BLAKE      MANAGER         2850</div><div class="line">CLARK      MANAGER         2450</div><div class="line">JONES      MANAGER         2975</div><div class="line">MARTIN     SALESMAN        1250</div><div class="line">ALLEN      SALESMAN        1600</div><div class="line">TURNER     SALESMAN        1500</div><div class="line">WARD       SALESMAN        1250</div><div class="line">FORD       ANALYST         3000</div><div class="line">SCOTT      ANALYST         3000</div><div class="line"></div><div class="line"> 已選取 10 個資料列</div></pre></td></tr></table></figure>
+<h3 id="SQL特定運算子"><a href="#SQL特定運算子" class="headerlink" title="SQL特定運算子"></a>SQL特定運算子</h3><ul>
+<li>範圍區間的搜尋，使用<strong>BETWEEN</strong>運算子。</li>
+<li>列舉可能的資料串列，使用<strong>IN</strong>運算子。</li>
+<li>字串樣版搜尋資料，使用<strong>LIKE</strong>運算子。<strong>(只能用在字串)</strong></li>
+<li>使用<strong>IS NULL</strong>運算子來檢測<strong>NULL值</strong>。</li>
+</ul>
+<h4 id="BETWEEN-AND-運算子-連續區間的條件判斷"><a href="#BETWEEN-AND-運算子-連續區間的條件判斷" class="headerlink" title="BETWEEN AND 運算子 -- 連續區間的條件判斷"></a>BETWEEN AND 運算子 -- 連續區間的條件判斷</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal BETWEEN 1000 AND 1500;</div><div class="line">================================</div><div class="line">ENAME             SAL</div><div class="line">---------- ----------</div><div class="line">MARTIN           1250</div><div class="line">TURNER           1500</div><div class="line">WARD             1250</div><div class="line">ADAMS            1100</div><div class="line">MILLER           1300</div></pre></td></tr></table></figure>
+<h4 id="IN-運算子-列舉值的查詢"><a href="#IN-運算子-列舉值的查詢" class="headerlink" title="IN 運算子 -- 列舉值的查詢"></a>IN 運算子 -- 列舉值的查詢</h4><p><strong>直接指定條件</strong></p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">SELECT empno,ename,sal,mgr</div><div class="line">FROM emp</div><div class="line">WHERE mgr IN (7902,7566,7788);</div><div class="line">==============================</div><div class="line">     EMPNO ENAME             SAL        MGR</div><div class="line">---------- ---------- ---------- ----------</div><div class="line">      7902 FORD             3000       7566</div><div class="line">      7369 SMITH             800       7902</div><div class="line">      7788 SCOTT            3000       7566</div><div class="line">      7876 ADAMS            1100       7788</div></pre></td></tr></table></figure>
+<h4 id="LIKE-運算子-模糊比對-萬用字元查詢-模糊比對"><a href="#LIKE-運算子-模糊比對-萬用字元查詢-模糊比對" class="headerlink" title="LIKE 運算子 -- 模糊比對 -- 萬用字元查詢(模糊比對)"></a>LIKE 運算子 -- 模糊比對 -- 萬用字元查詢(模糊比對)</h4><ul>
+<li><strong>%</strong> 任意字元</li>
+<li><strong>_</strong>　 一個字元</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT ename,empno,sal</div><div class="line">FROM emp</div><div class="line">WHERE ename LIKE &apos;S%&apos;;  //有大小之分;</div><div class="line"></div><div class="line">&apos;S%&apos; S開頭</div><div class="line">&apos;%S%&apos; 只要有S的</div><div class="line">&apos;%S&apos; 只要S字尾的</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">SELECT ename</div><div class="line">FROM emp</div><div class="line">WHERE ename LIKE &apos;_S%&apos;;     //找第二個字是S的資料</div><div class="line"></div><div class="line">//底線表示一個byte</div></pre></td></tr></table></figure>
+<h4 id="IS-NULL-運算子"><a href="#IS-NULL-運算子" class="headerlink" title="IS NULL 運算子"></a>IS NULL 運算子</h4><ul>
+<li>判斷資料是否為 NULL 值</li>
+<li>IS NULL用於判斷資料項是否為 NULL 值的專屬運算子</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT ename,mgr,job</div><div class="line">FROM emp</div><div class="line">WHERE mgr IS NULL;      //另一個寫法==&gt; WHERE mgr=NULL;</div><div class="line">==================</div><div class="line">ENAME             MGR JOB     </div><div class="line">---------- ---------- ---------</div><div class="line">KING                  PRESIDENT</div></pre></td></tr></table></figure>
+<hr>
+<h2 id="資料排序-ORDER-BY-子句"><a href="#資料排序-ORDER-BY-子句" class="headerlink" title="資料排序 -- ORDER BY 子句"></a>資料排序 -- ORDER BY 子句</h2><ul>
+<li>ASC 升幂，由小到大排序(Ascending)</li>
+<li>DESC 降幂，由大到小排序(Descending)</li>
+</ul>
+<h3 id="可排序資料"><a href="#可排序資料" class="headerlink" title="可排序資料"></a>可排序資料</h3><p>欄位 / 別名 / 運算式 / 位置。</p>
+<h3 id="預設資料排序方式-預設由小到大"><a href="#預設資料排序方式-預設由小到大" class="headerlink" title="預設資料排序方式 -- 預設由小到大"></a>預設資料排序方式 -- 預設由小到大</h3><ul>
+<li>數值資料：由小到大。</li>
+<li>日期資料：依世紀、年、月，日，時，分，秒，由小排到大。</li>
+<li>字元資料：依內碼順序由小到大排序。</li>
+<li>空值：排序時，將NULL值視為最大值。</li>
+</ul>
+<h3 id="範例-升冪-由小到大-預設"><a href="#範例-升冪-由小到大-預設" class="headerlink" title="範例 -- 升冪(由小到大)預設"></a>範例 -- 升冪(由小到大)預設</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno,hiredate</div><div class="line">FROM emp</div><div class="line">ORDER BY hiredate;</div><div class="line">=================================</div><div class="line">ENAME      JOB           DEPTNO HIREDATE</div><div class="line">---------- --------- ---------- ---------</div><div class="line">SMITH      CLERK             20 17-12月-80</div><div class="line">ALLEN      SALESMAN          30 20-2月 -81</div><div class="line">WARD       SALESMAN          30 22-2月 -81</div></pre></td></tr></table></figure>
+<h3 id="範例-降冪-由大到小"><a href="#範例-降冪-由大到小" class="headerlink" title="範例 -- 降冪(由大到小)"></a>範例 -- 降冪(由大到小)</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,deptno,hiredate</div><div class="line">FROM emp</div><div class="line">ORDER BY hiredate DESC;</div><div class="line">=================================</div><div class="line">ENAME      JOB           DEPTNO HIREDATE</div><div class="line">---------- --------- ---------- ---------</div><div class="line">ADAMS      CLERK             20 12-1月 -83</div><div class="line">SCOTT      ANALYST           20 09-12月-82</div><div class="line">MILLER     CLERK             10 23-1月 -82</div></pre></td></tr></table></figure>
+<h3 id="範例-NULL為最大值"><a href="#範例-NULL為最大值" class="headerlink" title="範例 -- NULL為最大值"></a>範例 -- NULL為最大值</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal,comm</div><div class="line">FROM emp</div><div class="line">ORDER BY comm DESC;</div><div class="line">=====================</div><div class="line">ENAME             SAL       COMM</div><div class="line">---------- ---------- ----------</div><div class="line">ADAMS            1100           </div><div class="line">JAMES             950           </div><div class="line">FORD             3000           </div><div class="line">MARTIN           1250       1400</div><div class="line">WARD             1250        500</div><div class="line">ALLEN            1600        300</div><div class="line">TURNER           1500          0</div></pre></td></tr></table></figure>
+<h3 id="使用欄位位置排序"><a href="#使用欄位位置排序" class="headerlink" title="使用欄位位置排序"></a>使用欄位位置排序</h3><ul>
+<li>依資料項在SELECT <list> 中的位置順序<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">SELECT empno,ename,sal*12 annsal</div><div class="line">FROM emp</div><div class="line">ORDER BY 3; //以第三個欄位做排序</div><div class="line">===============================</div><div class="line">EMPNO ENAME          ANNSAL</div><div class="line">---------- ---------- ----------</div><div class="line">      7369 SMITH            9600</div><div class="line">      7900 JAMES           11400</div><div class="line">      7876 ADAMS           13200</div><div class="line">      7654 MARTIN          15000</div></pre></td></tr></table></figure>
+</list></li>
+</ul>
+<h3 id="多個資料項排序"><a href="#多個資料項排序" class="headerlink" title="多個資料項排序"></a>多個資料項排序</h3><ul>
+<li>每一個資料項(欄位)皆可指定降冪或升膜冪<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">SELECT ename,deptno,sal</div><div class="line">FROM emp</div><div class="line">ORDER BY deptno,sal DESC; //deptno是升冪sal是降冪</div><div class="line">==========================</div><div class="line">ENAME          DEPTNO        SAL</div><div class="line">---------- ---------- ----------</div><div class="line">KING               10       5000</div><div class="line">CLARK              10       2450</div><div class="line">MILLER             10       1300</div><div class="line">SCOTT              20       3000</div><div class="line">FORD               20       3000</div><div class="line">JONES              20       2975</div><div class="line">ADAMS              20       1100</div><div class="line">SMITH              20        800</div><div class="line">BLAKE              30       2850</div><div class="line">ALLEN              30       1600</div><div class="line">TURNER             30       1500</div><div class="line">MARTIN             30       1250</div><div class="line">WARD               30       1250</div><div class="line">JAMES              30        950</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">SELECT ename,deptno,sal</div><div class="line">FROM emp</div><div class="line">ORDER BY deptno DESC,sal DESC; //二個都是用降冪</div><div class="line">==============================</div><div class="line">ENAME          DEPTNO        SAL</div><div class="line">---------- ---------- ----------</div><div class="line">BLAKE              30       2850</div><div class="line">ALLEN              30       1600</div><div class="line">TURNER             30       1500</div><div class="line">WARD               30       1250</div><div class="line">MARTIN             30       1250</div><div class="line">JAMES              30        950</div><div class="line">FORD               20       3000</div><div class="line">SCOTT              20       3000</div><div class="line">JONES              20       2975</div><div class="line">ADAMS              20       1100</div><div class="line">SMITH              20        800</div><div class="line">KING               10       5000</div><div class="line">CLARK              10       2450</div><div class="line">MILLER             10       1300</div></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/">Oracle資料查詢--設定查詢條件與資料排序</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
+        <p><span>發布時間:</span>2016-12-22, 15:35:34</p>
+        <p><span>最後更新:</span>2016-12-22, 15:38:35</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/" title="Oracle資料查詢--設定查詢條件與資料排序">http://yoursite.com/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/12/21/Oracle練習-簡單查詢/">
+                    Oracle練習--簡單查詢
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#SQL命令的分類"><span class="toc-number">1.</span> <span class="toc-text">SQL命令的分類</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#資料查詢"><span class="toc-number">2.</span> <span class="toc-text">資料查詢</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#過濾資料列-WHERE子句"><span class="toc-number">3.</span> <span class="toc-text">過濾資料列--WHERE子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#未過濾"><span class="toc-number">3.1.</span> <span class="toc-text">未過濾</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#過濾-deptno只留10的"><span class="toc-number">3.2.</span> <span class="toc-text">過濾--deptno只留10的</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#WHERE子句說明"><span class="toc-number">4.</span> <span class="toc-text">WHERE子句說明</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#邏輯條件"><span class="toc-number">4.1.</span> <span class="toc-text">邏輯條件</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#比較運算式"><span class="toc-number">4.2.</span> <span class="toc-text">比較運算式</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#字串資料-找出JAMES的資料"><span class="toc-number">4.2.1.</span> <span class="toc-text">字串資料--找出JAMES的資料</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#數值資料-找出薪資大於或等於2000"><span class="toc-number">4.2.2.</span> <span class="toc-text">數值資料 -- 找出薪資大於或等於2000</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#日期時間資料-1981以後加入公司的"><span class="toc-number">4.2.3.</span> <span class="toc-text">日期時間資料 -- 1981以後加入公司的</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#邏輯運算子"><span class="toc-number">4.3.</span> <span class="toc-text">邏輯運算子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#AND必須二個運算元都是True才會符合查詢條件"><span class="toc-number">4.3.1.</span> <span class="toc-text">AND必須二個運算元都是True才會符合查詢條件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#OR-只要有一個運算元是True就符合查詢條件"><span class="toc-number">4.3.2.</span> <span class="toc-text">OR -- 只要有一個運算元是True就符合查詢條件</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#NOT-反向運算"><span class="toc-number">4.3.3.</span> <span class="toc-text">NOT -- 反向運算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#SQL特定運算子"><span class="toc-number">4.4.</span> <span class="toc-text">SQL特定運算子</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#BETWEEN-AND-運算子-連續區間的條件判斷"><span class="toc-number">4.4.1.</span> <span class="toc-text">BETWEEN AND 運算子 -- 連續區間的條件判斷</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IN-運算子-列舉值的查詢"><span class="toc-number">4.4.2.</span> <span class="toc-text">IN 運算子 -- 列舉值的查詢</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#LIKE-運算子-模糊比對-萬用字元查詢-模糊比對"><span class="toc-number">4.4.3.</span> <span class="toc-text">LIKE 運算子 -- 模糊比對 -- 萬用字元查詢(模糊比對)</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#IS-NULL-運算子"><span class="toc-number">4.4.4.</span> <span class="toc-text">IS NULL 運算子</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#資料排序-ORDER-BY-子句"><span class="toc-number">5.</span> <span class="toc-text">資料排序 -- ORDER BY 子句</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#可排序資料"><span class="toc-number">5.1.</span> <span class="toc-text">可排序資料</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#預設資料排序方式-預設由小到大"><span class="toc-number">5.2.</span> <span class="toc-text">預設資料排序方式 -- 預設由小到大</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#範例-升冪-由小到大-預設"><span class="toc-number">5.3.</span> <span class="toc-text">範例 -- 升冪(由小到大)預設</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#範例-降冪-由大到小"><span class="toc-number">5.4.</span> <span class="toc-text">範例 -- 降冪(由大到小)</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#範例-NULL為最大值"><span class="toc-number">5.5.</span> <span class="toc-text">範例 -- NULL為最大值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#使用欄位位置排序"><span class="toc-number">5.6.</span> <span class="toc-text">使用欄位位置排序</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#多個資料項排序"><span class="toc-number">5.7.</span> <span class="toc-text">多個資料項排序</span></a></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Oracle資料查詢--設定查詢條件與資料排序　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+      <div class="duoshuo" id="comments">
+    <div id="comment-box" ></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/" data-title="Oracle資料查詢--設定查詢條件與資料排序" data-url="http://yoursite.com/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/"></div>
+    <script>
+        var duoshuoQuery = {short_name:"huang2189"};
+        var loadComment = function(){
+            var d = document, s = d.createElement('script');
+            s.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+            s.async = true; s.charset = 'UTF-8';
+            (d.head || d.body).appendChild(s);
+        }
+
+        
+    </script>
+    
+    <script> loadComment(); </script>
+
+</div>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/12/21/Oracle練習-簡單查詢/" title="下一篇: Oracle練習--簡單查詢">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/">Oracle資料查詢--設定查詢條件與資料排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Oracle練習-簡單查詢/">Oracle練習--簡單查詢</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Oracle資料查詢-簡單查詢/">Oracle資料查詢--簡單查詢</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/關聯式資料庫管理系統-RDBMS/">關聯式資料庫管理系統(RDBMS)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/資料庫與檔案系統比較/">資料庫與檔案系統比較</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/HTML字符實體（Character-Entities），轉義字符串（Escape-Sequence/">HTML字符實體（Character Entities），轉義字符串（Escape Sequence)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/用鍵盤打出特殊符號/">用鍵盤打出特殊符號</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/安裝Oracle-Server-及-SQL-Developer/">安裝Oracle Server 及 SQL Developer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Sublime-Text3-套件/">Sublime Text3 套件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/安裝Sublime-Text3/">安裝Sublime Text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/windows7升級成windows10之後的問題/">windows7升級成windows10之後的問題</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/11/微軟軟體授權/">微軟軟體授權</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/SQL-Server-安裝/">SQL Server 安裝</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Eclipse-常用的快捷鍵/">Eclipse 常用的快捷鍵</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/中文亂碼：環境編碼設定/">中文亂碼：環境編碼設定</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/03/讓網頁選擇在瀏覽器上運行/">讓網頁選擇在瀏覽器上運行</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/03/20161203-01/">ORA-28000:the account is locked</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/Hexo-架站/">Hexo 架站</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                <i class="fa fa-copyright"></i> 
+                2016 Huang2189
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、簡單且強大的網誌框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="簡而不減 Hexo 雙欄網誌主題  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" title="本站到訪數"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>| </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit"  title="本頁閱讀量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回頂部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" onclick="load$hide();" title="查看評論"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="轉到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+<script>
+    // Open in New Window
+    
+        var oOpenInNew = {
+            
+            
+            
+            
+            
+            
+             archives: ".archive-article-title", 
+             miniArchives: "a.post-list-link", 
+            
+             friends: "#js-friends a", 
+             socail: ".social a" 
+        }
+        for (var x in oOpenInNew) {
+            $(oOpenInNew[x]).attr("target", "_blank");
+        }
+    
+</script>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>

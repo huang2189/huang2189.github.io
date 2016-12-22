@@ -1494,6 +1494,7 @@ color
 }
 .article-entry h1 {
   margin-top: 30px;
+  font-weight: bold;
 }
 .article-entry h2 {
   margin: 0.5em auto;
@@ -1502,13 +1503,14 @@ color
   border-bottom: 1px solid #ddd;
   text-align: left;
   font-size: 1.5rem;
+  font-weight: bold;
 }
 .article-entry h2:hover {
   color: #88acdb;
 }
 .article-entry h2::before,
 .article-entry h2::after {
-  content: "";
+  content: " =※=  ";
   font-family: Arial;
 }
 .article-entry h3 {
