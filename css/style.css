@@ -1508,8 +1508,8 @@ color
 }
 .article-entry h2::before,
 .article-entry h2::after {
-  content: " ## ";
-  font-family: Arial;
+  content: "";
+  font-family: 微軟正黑體;
 }
 .article-entry h3 {
   margin: 0.5em auto;
