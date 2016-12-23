@@ -15,21 +15,13 @@
 
 
 
-<meta name="description" content="Oracle的pro：1521">
 <meta property="og:type" content="article">
-<meta property="og:title" content="安裝Oracle Server 及 SQL Developer">
-<meta property="og:url" content="http://yoursite.com/2016/12/18/安裝Oracle-Server-及-SQL-Developer/index.html">
+<meta property="og:title" content="Oracle練習--設定查詢條件與資料排序">
+<meta property="og:url" content="http://yoursite.com/2016/12/23/Oracle練習-設定查詢條件與資料排序/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:description" content="Oracle的pro：1521">
-<meta property="og:image" content="http://i.imgbox.com/AAMkN8yL.png">
-<meta property="og:image" content="http://i.imgbox.com/kBocswvi.png">
-<meta property="og:image" content="http://i.imgbox.com/eEICedXF.png">
-<meta property="og:image" content="http://i.imgbox.com/aHMGVjy5.png">
-<meta property="og:updated_time" content="2016-12-18T10:59:30.870Z">
+<meta property="og:updated_time" content="2016-12-23T03:52:47.311Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="安裝Oracle Server 及 SQL Developer">
-<meta name="twitter:description" content="Oracle的pro：1521">
-<meta name="twitter:image" content="http://i.imgbox.com/AAMkN8yL.png">
+<meta name="twitter:title" content="Oracle練習--設定查詢條件與資料排序">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -61,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>安裝Oracle Server 及 SQL Developer | ░ 菜鳥 ░</title>
+<title>Oracle練習--設定查詢條件與資料排序 | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -272,11 +264,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-安裝Oracle-Server-及-SQL-Developer" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Oracle練習-設定查詢條件與資料排序" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/18/安裝Oracle-Server-及-SQL-Developer/" class="article-date">
-      <time datetime="2016-12-18T05:22:12.000Z" itemprop="datePublished">2016-12-18</time>
+      <a href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/" class="article-date">
+      <time datetime="2016-12-23T03:52:15.000Z" itemprop="datePublished">2016-12-23</time>
 </a>
 
 
@@ -291,7 +283,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      安裝Oracle Server 及 SQL Developer
+      Oracle練習--設定查詢條件與資料排序
     </h1>
   
 
@@ -300,13 +292,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/oracle/">oracle</a>
+    <a class="article-category-link" href="/categories/資料庫/">資料庫</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle-11g/">oracle_11g</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle練習/">oracle練習</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -317,54 +309,21 @@
       
           
         <p><excerpt in="" index="" |="" 首頁摘要="">
-Oracle的pro：1521
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<h2 id="下載-Oracle"><a href="#下載-Oracle" class="headerlink" title="下載 Oracle"></a>下載 Oracle</h2><ul>
-<li>在官網下載要先加入會員。</li>
-<li>Oracle Server(Oracle Database Express Edition 11g Release 2)<br><a href="http://www.oracle.com/technetwork/database/database-technologies/express-edition/downloads/index.html" target="_blank" rel="external">載點</a></li>
-<li>Oracle SQL Developer<br><a href="http://www.oracle.com/technetwork/developer-tools/sql-developer/downloads/index.html" target="_blank" rel="external">載點</a></li>
-</ul>
-<hr>
-<h2 id="安裝"><a href="#安裝" class="headerlink" title="安裝"></a>安裝</h2><p>在安裝Oracle Server的過程中會設定&quot;Specify Database Passwords&quot;，這是系統密碼，要記住。<br>安裝速度很快，也不需要做設定。  </p>
-<hr>
-<h2 id="啓動Run-SQL-Command-Line"><a href="#啓動Run-SQL-Command-Line" class="headerlink" title="啓動Run SQL Command Line"></a>啓動Run SQL Command Line</h2><p>安裝Oracle Server後，會有個SQL的命令字元視窗，雖然介面式的操作很方便，但也還是要知道如何在命令字元視窗下指令。  </p>
-<ul>
-<li><strong>登入</strong><blockquote>
-<p><strong>登入指令有兩種：</strong></p>
-<blockquote>
-<p>connect system</p>
-<pre><code>或是
-</code></pre><p>connect 帳號/密碼</p>
-</blockquote>
-</blockquote>
-</li>
-<li><strong>加入資料庫</strong>
-  將資料庫放在指定的位置後輸入指令<blockquote>
-<p>@ C:\xxxxx.sql</p>
-</blockquote>
-</li>
-<li><strong>建立一個使用者帳號</strong><blockquote>
-<p>CREATE USER [帳號] IDENTIFIED BY [密碼]<br>DEFAULT TABLESPACE users;  </p>
-</blockquote>
-</li>
-</ul>
-<p><strong>註：在這裡不管輸入幾行指令，只要沒有輸入分號(;)，就不會執行</strong></p>
-<ul>
-<li><strong>離開</strong><blockquote>
-<p>exit</p>
-</blockquote>
-</li>
-</ul>
-<hr>
-<h2 id="建立連線"><a href="#建立連線" class="headerlink" title="建立連線"></a>建立連線</h2><p>打開SQL Developer。<br>先新增連線<br>使用者名稱要填 &quot;system  &quot;
-並按測試<br>看是否能連線  </p>
-<p><img src="http://i.imgbox.com/AAMkN8yL.png" alt=""></p>
-<h2 id="授權"><a href="#授權" class="headerlink" title="授權"></a>授權</h2><p>使用者帳號如果沒有授權是無法建立連線。<br>Developer授權方式如下：<br>在system的連線下找到&quot;其他使用者&quot;<br><img src="http://i.imgbox.com/kBocswvi.png" alt="">  </p>
-<p>點開後找到新增的使用者<br>按右鍵--&gt;選&quot;編輯使用者&quot;<br><img src="http://i.imgbox.com/eEICedXF.png" alt="">  </p>
-<p>選擇&quot;授權的角色&quot;下方<br>找到&quot;Conneet&quot;跟&quot;Resource&quot;在已授權的地方打勾<br>再選擇&quot;配額&quot;
-找到users打勾後按&quot;套用&quot;<br><img src="http://i.imgbox.com/aHMGVjy5.png" alt="">  </p>
-<p>接著替使用者建立連線  </p>
+<h3 id="找出員工薪資超過2850元的員工之姓名和薪水"><a href="#找出員工薪資超過2850元的員工之姓名和薪水" class="headerlink" title="找出員工薪資超過2850元的員工之姓名和薪水"></a>找出員工薪資超過2850元的員工之姓名和薪水</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal&gt;2850;</div></pre></td></tr></table></figure>
+<h3 id="找出員工編號為7566的姓名和他所屬的部門編號"><a href="#找出員工編號為7566的姓名和他所屬的部門編號" class="headerlink" title="找出員工編號為7566的姓名和他所屬的部門編號"></a>找出員工編號為7566的姓名和他所屬的部門編號</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT ename,deptno</div><div class="line">FROM emp</div><div class="line">WHERE empno = 7566;</div><div class="line">===========================</div><div class="line">SELECT ename,deptno</div><div class="line">FROM emp</div><div class="line">WHERE empno IN 7566;</div></pre></td></tr></table></figure>
+<h3 id="找出薪資於1500-2850元之外的所有員工之姓名和薪資。"><a href="#找出薪資於1500-2850元之外的所有員工之姓名和薪資。" class="headerlink" title="找出薪資於1500~2850元之外的所有員工之姓名和薪資。"></a>找出薪資於1500~2850元之外的所有員工之姓名和薪資。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal</div><div class="line">FROM emp</div><div class="line">WHERE sal NOT BETWEEN 1500 AND 2850;</div></pre></td></tr></table></figure>
+<h3 id="找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名-職稱和進公司日期，並依進公司日期由小到大排序。"><a href="#找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名-職稱和進公司日期，並依進公司日期由小到大排序。" class="headerlink" title="找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名,職稱和進公司日期，並依進公司日期由小到大排序。"></a>找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名,職稱和進公司日期，並依進公司日期由小到大排序。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,hiredate</div><div class="line">FROM emp</div><div class="line">WHERE hiredate BETWEEN &apos;20-2月-81&apos; AND &apos;1-5月-81&apos;</div><div class="line">ORDER BY hiredate;</div></pre></td></tr></table></figure>
+<h3 id="找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。"><a href="#找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。" class="headerlink" title="找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。"></a>找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT ename,deptno</div><div class="line">FROM emp</div><div class="line">WHERE deptno IN (10,30)</div><div class="line">ORDER BY ename;</div></pre></td></tr></table></figure>
+<h3 id="薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和-Monthly-Salary。"><a href="#薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和-Monthly-Salary。" class="headerlink" title="薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和 Monthly Salary。"></a>薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和 Monthly Salary。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT ename &quot;Employee&quot;,sal &quot;Monthly Salary&quot;</div><div class="line">FROM emp</div><div class="line">WHERE sal&gt;1500 AND deptno IN (10,30);</div><div class="line">=============================================</div><div class="line">SELECT ename &quot;Employee&quot;,sal &quot;Monthly Salary&quot;</div><div class="line">FROM emp</div><div class="line">WHERE (sal&gt;1500) AND (deptno IN (10,30));</div></pre></td></tr></table></figure>
+<h3 id="找出於1982年進公司的所有員工之姓名-職稱和進公司日期。"><a href="#找出於1982年進公司的所有員工之姓名-職稱和進公司日期。" class="headerlink" title="找出於1982年進公司的所有員工之姓名,職稱和進公司日期。"></a>找出於1982年進公司的所有員工之姓名,職稱和進公司日期。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,hiredate</div><div class="line">FROM emp</div><div class="line">WHERE hiredate BETWEEN &apos;1-1月-82&apos; AND &apos;31-12月82&apos;;</div></pre></td></tr></table></figure>
+<h3 id="找出沒有主管的員工之姓名和職稱。"><a href="#找出沒有主管的員工之姓名和職稱。" class="headerlink" title="找出沒有主管的員工之姓名和職稱。"></a>找出沒有主管的員工之姓名和職稱。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job</div><div class="line">FROM emp</div><div class="line">WHERE mgr IS NULL;</div></pre></td></tr></table></figure>
+<h3 id="找出所有有賺取佣金的員工之姓名-薪資和佣金，並以薪資和佣金作降冪排列。"><a href="#找出所有有賺取佣金的員工之姓名-薪資和佣金，並以薪資和佣金作降冪排列。" class="headerlink" title="找出所有有賺取佣金的員工之姓名,薪資和佣金，並以薪資和佣金作降冪排列。"></a>找出所有有賺取佣金的員工之姓名,薪資和佣金，並以薪資和佣金作降冪排列。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal,comm</div><div class="line">FROM emp</div><div class="line">WHERE comm &gt; 0</div><div class="line">ORDER BY sal DESC ,comm DESC;</div></pre></td></tr></table></figure>
+<h3 id="找出所有名字裡第三個英文字母為A的員工之姓名與職稱。"><a href="#找出所有名字裡第三個英文字母為A的員工之姓名與職稱。" class="headerlink" title="找出所有名字裡第三個英文字母為A的員工之姓名與職稱。"></a>找出所有名字裡第三個英文字母為A的員工之姓名與職稱。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job</div><div class="line">FROM emp</div><div class="line">WHERE ename LIKE &apos;__A%&apos;;</div></pre></td></tr></table></figure>
+<h3 id="找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名-經理員工編號及所屬的部門編號。"><a href="#找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名-經理員工編號及所屬的部門編號。" class="headerlink" title="找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名,經理員工編號及所屬的部門編號。"></a>找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名,經理員工編號及所屬的部門編號。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">SELECT empno,ename,deptno</div><div class="line">FROM emp</div><div class="line">WHERE ename LIKE &apos;%LL%&apos; AND deptno IN 30 OR mgr IN 7782;</div><div class="line">==========================================================</div><div class="line">SELECT empno,ename,deptno</div><div class="line">FROM emp</div><div class="line">WHERE (ename LIKE &apos;%LL%&apos;) AND (deptno = 30 OR mgr = 7782);</div></pre></td></tr></table></figure>
+<h3 id="找出職稱為Clerk或Analyst且薪水不等於1000-3000-5000的員工之姓名-職稱和薪資。"><a href="#找出職稱為Clerk或Analyst且薪水不等於1000-3000-5000的員工之姓名-職稱和薪資。" class="headerlink" title="找出職稱為Clerk或Analyst且薪水不等於1000,3000,5000的員工之姓名,職稱和薪資。"></a>找出職稱為Clerk或Analyst且薪水不等於1000,3000,5000的員工之姓名,職稱和薪資。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,job,sal</div><div class="line">FROM emp</div><div class="line">WHERE (job IN (&apos;CLERK&apos;,&apos;ANALYST&apos;)) AND (sal NOT IN (1000,3000,5000));</div></pre></td></tr></table></figure>
+<h3 id="找出佣金比薪水的1-1倍還多的員工之姓名-薪資和佣金。"><a href="#找出佣金比薪水的1-1倍還多的員工之姓名-薪資和佣金。" class="headerlink" title="找出佣金比薪水的1.1倍還多的員工之姓名,薪資和佣金。"></a>找出佣金比薪水的1.1倍還多的員工之姓名,薪資和佣金。</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">SELECT ename,sal,sal*1.1,comm</div><div class="line">FROM emp</div><div class="line">WHERE comm &gt; sal*1.1;</div></pre></td></tr></table></figure>
 <hr>
 
       
@@ -374,13 +333,13 @@ Oracle的pro：1521
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/12/18/安裝Oracle-Server-及-SQL-Developer/">安裝Oracle Server 及 SQL Developer</a></p>
+        <p><span>本文標題:</span><a href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/">Oracle練習--設定查詢條件與資料排序</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
-        <p><span>發布時間:</span>2016-12-18, 05:22:12</p>
-        <p><span>最後更新:</span>2016-12-18, 10:59:30</p>
+        <p><span>發布時間:</span>2016-12-23, 03:52:15</p>
+        <p><span>最後更新:</span>2016-12-23, 03:52:47</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/12/18/安裝Oracle-Server-及-SQL-Developer/" title="安裝Oracle Server 及 SQL Developer">http://yoursite.com/2016/12/18/安裝Oracle-Server-及-SQL-Developer/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/18/安裝Oracle-Server-及-SQL-Developer/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/" title="Oracle練習--設定查詢條件與資料排序">http://yoursite.com/2016/12/23/Oracle練習-設定查詢條件與資料排序/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/23/Oracle練習-設定查詢條件與資料排序/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -392,16 +351,10 @@ Oracle的pro：1521
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/19/用鍵盤打出特殊符號/">
-                    用鍵盤打出特殊符號
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/18/Sublime-Text3-套件/">
-                    Sublime Text3 套件
+                <a href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/">
+                    Oracle資料查詢--設定查詢條件與資料排序
                 </a>
             </div>
         
@@ -413,7 +366,7 @@ Oracle的pro：1521
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#下載-Oracle"><span class="toc-number">1.</span> <span class="toc-text">下載 Oracle</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安裝"><span class="toc-number">2.</span> <span class="toc-text">安裝</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#啓動Run-SQL-Command-Line"><span class="toc-number">3.</span> <span class="toc-text">啓動Run SQL Command Line</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#建立連線"><span class="toc-number">4.</span> <span class="toc-text">建立連線</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#授權"><span class="toc-number">5.</span> <span class="toc-text">授權</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#找出員工薪資超過2850元的員工之姓名和薪水"><span class="toc-number">1.</span> <span class="toc-text">找出員工薪資超過2850元的員工之姓名和薪水</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出員工編號為7566的姓名和他所屬的部門編號"><span class="toc-number">2.</span> <span class="toc-text">找出員工編號為7566的姓名和他所屬的部門編號</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出薪資於1500-2850元之外的所有員工之姓名和薪資。"><span class="toc-number">3.</span> <span class="toc-text">找出薪資於1500~2850元之外的所有員工之姓名和薪資。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名-職稱和進公司日期，並依進公司日期由小到大排序。"><span class="toc-number">4.</span> <span class="toc-text">找出於1981年2月20日和1981年5月1日間進入公司的員工之姓名,職稱和進公司日期，並依進公司日期由小到大排序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。"><span class="toc-number">5.</span> <span class="toc-text">找出部門10和30所有員工之姓名和他所屬的部門編號，並依名字依英文字母順序排序。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和-Monthly-Salary。"><span class="toc-number">6.</span> <span class="toc-text">薪資超過1500“且”在10“或”30部門工作員工之姓名和薪資，把分別把表頭命名為Employee和 Monthly Salary。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出於1982年進公司的所有員工之姓名-職稱和進公司日期。"><span class="toc-number">7.</span> <span class="toc-text">找出於1982年進公司的所有員工之姓名,職稱和進公司日期。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出沒有主管的員工之姓名和職稱。"><span class="toc-number">8.</span> <span class="toc-text">找出沒有主管的員工之姓名和職稱。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出所有有賺取佣金的員工之姓名-薪資和佣金，並以薪資和佣金作降冪排列。"><span class="toc-number">9.</span> <span class="toc-text">找出所有有賺取佣金的員工之姓名,薪資和佣金，並以薪資和佣金作降冪排列。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出所有名字裡第三個英文字母為A的員工之姓名與職稱。"><span class="toc-number">10.</span> <span class="toc-text">找出所有名字裡第三個英文字母為A的員工之姓名與職稱。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名-經理員工編號及所屬的部門編號。"><span class="toc-number">11.</span> <span class="toc-text">找出名字裡有兩個“L”且在30部門工作或經理是7782的員工之姓名,經理員工編號及所屬的部門編號。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出職稱為Clerk或Analyst且薪水不等於1000-3000-5000的員工之姓名-職稱和薪資。"><span class="toc-number">12.</span> <span class="toc-text">找出職稱為Clerk或Analyst且薪水不等於1000,3000,5000的員工之姓名,職稱和薪資。</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#找出佣金比薪水的1-1倍還多的員工之姓名-薪資和佣金。"><span class="toc-number">13.</span> <span class="toc-text">找出佣金比薪水的1.1倍還多的員工之姓名,薪資和佣金。</span></a></li></ol>
         
     </div>
     <style>
@@ -449,7 +402,7 @@ Oracle的pro：1521
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"安裝Oracle Server 及 SQL Developer　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Oracle練習--設定查詢條件與資料排序　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -465,7 +418,7 @@ Oracle的pro：1521
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/18/安裝Oracle-Server-及-SQL-Developer/" data-title="安裝Oracle Server 及 SQL Developer" data-url="http://yoursite.com/2016/12/18/安裝Oracle-Server-及-SQL-Developer/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/23/Oracle練習-設定查詢條件與資料排序/" data-title="Oracle練習--設定查詢條件與資料排序" data-url="http://yoursite.com/2016/12/23/Oracle練習-設定查詢條件與資料排序/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -488,15 +441,13 @@ Oracle的pro：1521
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/19/用鍵盤打出特殊符號/" title="上一篇: 用鍵盤打出特殊符號">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/18/Sublime-Text3-套件/" title="下一篇: Sublime Text3 套件">
+            <a href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/" title="下一篇: Oracle資料查詢--設定查詢條件與資料排序">
                 <i class="fa fa-angle-right"></i>
             </a>
         
