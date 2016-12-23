@@ -4,6 +4,46 @@
   
     
     <entry>
+      <title><![CDATA[Android Studio安裝]]></title>
+      <url>http://yoursite.com/2016/12/23/Android-Studio%E5%AE%89%E8%A3%9D/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h1 id="套件需求-安裝、下載"><a href="#套件需求-安裝、下載" class="headerlink" title="套件需求 - 安裝、下載"></a>套件需求 - 安裝、下載</h1><ul>
+<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=jdk+download" target="_blank" rel="external">JDK</a></li>
+<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=android+studio+download" target="_blank" rel="external">Android Studio</a> -- 開發環境經常在更動，可能會有所不同。  </li>
+</ul>
+<h1 id="設定-java-home-環境變數"><a href="#設定-java-home-環境變數" class="headerlink" title="設定 java_home 環境變數"></a>設定 java_home 環境變數</h1><p><strong>安裝完 JDK 後</strong>, 還必須設定 <strong>java_home 環境變數</strong>, 讓其他程式可以找到 JDK 的安裝路徑。  </p>
+<ul>
+<li><strong>先找到JDK安裝的路徑</strong>，並且把路徑拷貝起來。  </li>
+</ul>
+<p><img src="https://i.imgbox.com/rtZw2a3v.png" alt="">  </p>
+<ul>
+<li>找到環境變數的設定位置。  </li>
+</ul>
+<p><img src="https://i.imgbox.com/WUWqSqiU.png" alt="">  </p>
+<ul>
+<li>在系統變數中新增java_home (如果沒有的話)，並把路徑貼上。 </li>
+</ul>
+<p><img src="https://i.imgbox.com/rtjwd6eU.png" alt="">  </p>
+<p>Android Studio 的安裝都是使用預設，安裝時間會有點久。  </p>
+<p><img src="https://i.imgbox.com/r0ImLbOf.png" alt="">  </p>
+<p><img src="https://i.imgbox.com/fuChpz9A.png" alt="">  </p>
+<h1 id="新增專案"><a href="#新增專案" class="headerlink" title="新增專案"></a>新增專案</h1><p>選擇第一個可以新增專案  </p>
+<p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
+<p>Application name：應用程式名稱。這個名稱會顯示在手機畫面。<br>Company Domain：可輸入可不輸入，也可用預設。
+Package Name：是前二項合在一起，會自動產生。
+Project location：儲存的路徑名稱，可修改。<br>目前來說，Android Studio的命名還是以<strong>英文</strong>為主比較保險(包含路徑)，以免出現非預期的錯誤。  </p>
+<p><img src="https://i.imgbox.com/ArkQ382G.png" alt=""></p>
+<p>97.4%，指的是這個SDK版本可涵蓋多少百分比的裝置。多為預設。  </p>
+<p><img src="https://i.imgbox.com/PTg4YQRV.png" alt=""></p>
+<p>這頁都用預設的即可  </p>
+<p><img src="https://i.imgbox.com/rmjStnjQ.png" alt=""></p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Oracle練習--設定查詢條件與資料排序]]></title>
       <url>http://yoursite.com/2016/12/23/Oracle%E7%B7%B4%E7%BF%92-%E8%A8%AD%E5%AE%9A%E6%9F%A5%E8%A9%A2%E6%A2%9D%E4%BB%B6%E8%88%87%E8%B3%87%E6%96%99%E6%8E%92%E5%BA%8F/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
