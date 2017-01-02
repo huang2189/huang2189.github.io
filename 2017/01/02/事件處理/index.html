@@ -16,24 +16,12 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="Android Studio安裝">
-<meta property="og:url" content="http://yoursite.com/2016/12/23/Android-Studio安裝/index.html">
+<meta property="og:title" content="事件處理">
+<meta property="og:url" content="http://yoursite.com/2017/01/02/事件處理/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:image" content="https://i.imgbox.com/rtZw2a3v.png">
-<meta property="og:image" content="https://i.imgbox.com/WUWqSqiU.png">
-<meta property="og:image" content="https://i.imgbox.com/rtjwd6eU.png">
-<meta property="og:image" content="https://i.imgbox.com/r0ImLbOf.png">
-<meta property="og:image" content="https://i.imgbox.com/fuChpz9A.png">
-<meta property="og:image" content="https://i.imgbox.com/rk8zwtQa.png">
-<meta property="og:image" content="https://i.imgbox.com/ArkQ382G.png">
-<meta property="og:image" content="https://i.imgbox.com/PTg4YQRV.png">
-<meta property="og:image" content="https://i.imgbox.com/rmjStnjQ.png">
-<meta property="og:image" content="https://i.imgbox.com/UU2wuMAr.png">
-<meta property="og:image" content="https://i.imgbox.com/DJ6dNMk7.png">
-<meta property="og:updated_time" content="2016-12-23T16:13:29.480Z">
+<meta property="og:updated_time" content="2017-01-02T14:18:06.487Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Android Studio安裝">
-<meta name="twitter:image" content="https://i.imgbox.com/rtZw2a3v.png">
+<meta name="twitter:title" content="事件處理">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -65,7 +53,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Android Studio安裝 | ░ 菜鳥 ░</title>
+<title>事件處理 | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -276,11 +264,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Android-Studio安裝" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-事件處理" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/12/23/Android-Studio安裝/" class="article-date">
-      <time datetime="2016-12-23T14:48:46.000Z" itemprop="datePublished">2016-12-23</time>
+      <a href="/2017/01/02/事件處理/" class="article-date">
+      <time datetime="2017-01-02T14:16:17.000Z" itemprop="datePublished">2017-01-02</time>
 </a>
 
 
@@ -295,7 +283,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Android Studio安裝
+      事件處理
     </h1>
   
 
@@ -310,7 +298,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/AndroidStudio/">AndroidStudio</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -323,47 +311,45 @@
         <p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<h1 id="套件需求-安裝、下載"><a href="#套件需求-安裝、下載" class="headerlink" title="套件需求 - 安裝、下載"></a>套件需求 - 安裝、下載</h1><ul>
-<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=jdk+download" target="_blank" rel="external">JDK</a></li>
-<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=android+studio+download" target="_blank" rel="external">Android Studio</a> -- 開發環境經常在更動，可能會有所不同。  </li>
-</ul>
-<h1 id="設定-java-home-環境變數"><a href="#設定-java-home-環境變數" class="headerlink" title="設定 java_home 環境變數"></a>設定 java_home 環境變數</h1><p><strong>安裝完 JDK 後</strong>, 還必須設定 <strong>java_home 環境變數</strong>, 讓其他程式可以找到 JDK 的安裝路徑。  </p>
 <ul>
-<li><strong>先找到JDK安裝的路徑</strong>，並且把路徑拷貝起來。  </li>
+<li>使用者對手機進行各種操作時，會產生事件(Event)，藉由撰寫各種事件的處理程式，來和使用者進行互動。</li>
+<li>事件發生的來源,稱為該事件的來源物件。先建立一個監聽物件(監聽器,Listener)，然後將之登錄到來源物件中。</li>
+<li>介面(Interface)和類別很像，但是它只定義功能的架構而無實質內容。在 Android 的類別庫中,已經提供了各種監聽器介面,以供我們實作出監聽類別 並用來產生監聽物件。</li>
+<li>實作介面和繼承類別很類似,只不過實作介面時是用 implements 關鍵字。 而繼承類別是用 extends</li>
 </ul>
-<p><img src="https://i.imgbox.com/rtZw2a3v.png" alt="">  </p>
-<ul>
-<li>找到環境變數的設定位置。  </li>
-</ul>
-<p><img src="https://i.imgbox.com/WUWqSqiU.png" alt="">  </p>
-<ul>
-<li>在系統變數中新增java_home (如果沒有的話)，並把路徑貼上。 </li>
-</ul>
-<p><img src="https://i.imgbox.com/rtjwd6eU.png" alt="">  </p>
-<p>Android Studio 的安裝都是使用預設，安裝時間會有點久。  </p>
-<p><img src="https://i.imgbox.com/r0ImLbOf.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/fuChpz9A.png" alt="">  </p>
-<h1 id="新增專案"><a href="#新增專案" class="headerlink" title="新增專案"></a>新增專案</h1><p>選擇第一個可以新增專案  </p>
-<p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
-<p>Application name：應用程式名稱。這個名稱會顯示在手機畫面。<br>Company Domain：可輸入可不輸入，也可用預設。
-Package Name：是前二項合在一起，會自動產生。
-Project location：儲存的路徑名稱，可修改。<br>目前來說，Android Studio的命名還是以<strong>英文</strong>為主比較保險(包含路徑)，以免出現非預期的錯誤。  </p>
-<p><img src="https://i.imgbox.com/ArkQ382G.png" alt=""></p>
-<p>97.4%，指的是這個SDK版本可涵蓋多少百分比的裝置。多為預設。  </p>
-<p><img src="https://i.imgbox.com/PTg4YQRV.png" alt=""></p>
-<p>這頁都用預設的即可  </p>
-<p><img src="https://i.imgbox.com/rmjStnjQ.png" alt=""></p>
+<table border="1">
+    <tr>
+        <th> 事件 </th>
+        <th> 監聽器介面 </th>
+        <th> 介面中的方法 </th>
+        <th> 註冊到來源物件的方法 </th>
+    </tr>
+    <tr>
+        <td>按一下</td>
+        <td>OnClickListener</td>
+        <td>onClick()</td>
+        <td>setOnClickListener()</td>
+    </tr>
+    <tr>
+        <td>長按</td>
+        <td>OnLongClickListener</td>
+        <td>onLongClick()</td>
+        <td>setOnLongClickListener()</td>
+    </tr>
+    <tr>
+        <td>觸控</td>
+        <td>OnTouchListener</td>
+        <td>onTouch()</td>
+        <td>setOnTouchListener()</td>
+    </tr>
+</table>
+
 <hr>
-<h1 id="Android專案的構成"><a href="#Android專案的構成" class="headerlink" title="Android專案的構成"></a>Android專案的構成</h1><p>內含三個重要目錄  </p>
-<p><img src="https://i.imgbox.com/UU2wuMAr.png" alt="">  </p>
 <ul>
-<li>manifests：Android APP「整體資訊」的主要設定檔</li>
-<li>java： Java 原始程式都放在這</li>
-<li>res：專案所需的「非程式」UI 相關檔案，如 layout、圖像與文字  </li>
+<li>可以使用現成的 Activity類別(即 MainActivity)來實作監聽器介面，不用增加新的監聽類別。</li>
+<li>讓手機震動，可執行<strong>getSystemService(Context.VIBRATOR_SERVICE)</strong> 來取得 Vibrator 震動物件。然後用其vibrate()方法來產生震動。另外,還 必須先在 Android Manifest.xml 中登記 android. permission.VIBRATE 權限才可以使用。</li>
+<li>要監聽整個螢幕的觸控事件，只要修改由 Activity(或 AppCompatActivity) 類別繼承而來的onTouchEvent()方法。</li>
 </ul>
-<hr>
-<h1 id="官網"><a href="#官網" class="headerlink" title="官網"></a>官網</h1><p><a href="https://developer.android.com/develop/index.html" target="_blank" rel="external">官網</a>  </p>
-<p><img src="https://i.imgbox.com/DJ6dNMk7.png" alt=""></p>
 <hr>
 
       
@@ -373,13 +359,13 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2016/12/23/Android-Studio安裝/">Android Studio安裝</a></p>
+        <p><span>本文標題:</span><a href="/2017/01/02/事件處理/">事件處理</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
-        <p><span>發布時間:</span>2016-12-23, 14:48:46</p>
-        <p><span>最後更新:</span>2016-12-23, 16:13:29</p>
+        <p><span>發布時間:</span>2017-01-02, 14:16:17</p>
+        <p><span>最後更新:</span>2017-01-02, 14:18:06</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2016/12/23/Android-Studio安裝/" title="Android Studio安裝">http://yoursite.com/2016/12/23/Android-Studio安裝/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2016/12/23/Android-Studio安裝/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/01/02/事件處理/" title="事件處理">http://yoursite.com/2017/01/02/事件處理/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/02/事件處理/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -391,16 +377,10 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2016/12/24/Android-專案更名-for-Android-Studio/">
-                    Android 專案更名 for Android Studio
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/">
-                    Oracle練習--設定查詢條件與資料排序
+                <a href="/2017/01/02/OnTouchListerner介面中的onTouch/">
+                    OnTouchListerner介面中的onTouch()
                 </a>
             </div>
         
@@ -412,7 +392,7 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#套件需求-安裝、下載"><span class="toc-number">1.</span> <span class="toc-text">套件需求 - 安裝、下載</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#設定-java-home-環境變數"><span class="toc-number">2.</span> <span class="toc-text">設定 java_home 環境變數</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#新增專案"><span class="toc-number">3.</span> <span class="toc-text">新增專案</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Android專案的構成"><span class="toc-number">4.</span> <span class="toc-text">Android專案的構成</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#官網"><span class="toc-number">5.</span> <span class="toc-text">官網</span></a></li></ol>
+            
         
     </div>
     <style>
@@ -448,7 +428,7 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Android Studio安裝　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"事件處理　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -464,7 +444,7 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2016/12/23/Android-Studio安裝/" data-title="Android Studio安裝" data-url="http://yoursite.com/2016/12/23/Android-Studio安裝/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/02/事件處理/" data-title="事件處理" data-url="http://yoursite.com/2017/01/02/事件處理/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -487,15 +467,13 @@ Project location：儲存的路徑名稱，可修改。<br>目前來說，Androi
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2016/12/24/Android-專案更名-for-Android-Studio/" title="上一篇: Android 專案更名 for Android Studio">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/" title="下一篇: Oracle練習--設定查詢條件與資料排序">
+            <a href="/2017/01/02/OnTouchListerner介面中的onTouch/" title="下一篇: OnTouchListerner介面中的onTouch()">
                 <i class="fa fa-angle-right"></i>
             </a>
         

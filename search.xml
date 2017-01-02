@@ -4,6 +4,55 @@
   
     
     <entry>
+      <title><![CDATA[事件處理]]></title>
+      <url>http://yoursite.com/2017/01/02/%E4%BA%8B%E4%BB%B6%E8%99%95%E7%90%86/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<ul>
+<li>使用者對手機進行各種操作時，會產生事件(Event)，藉由撰寫各種事件的處理程式，來和使用者進行互動。</li>
+<li>事件發生的來源,稱為該事件的來源物件。先建立一個監聽物件(監聽器,Listener)，然後將之登錄到來源物件中。</li>
+<li>介面(Interface)和類別很像，但是它只定義功能的架構而無實質內容。在 Android 的類別庫中,已經提供了各種監聽器介面,以供我們實作出監聽類別 並用來產生監聽物件。</li>
+<li>實作介面和繼承類別很類似,只不過實作介面時是用 implements 關鍵字。 而繼承類別是用 extends</li>
+</ul>
+<table border="1">
+    <tr>
+        <th> 事件 </th>
+        <th> 監聽器介面 </th>
+        <th> 介面中的方法 </th>
+        <th> 註冊到來源物件的方法 </th>
+    </tr>
+    <tr>
+        <td>按一下</td>
+        <td>OnClickListener</td>
+        <td>onClick()</td>
+        <td>setOnClickListener()</td>
+    </tr>
+    <tr>
+        <td>長按</td>
+        <td>OnLongClickListener</td>
+        <td>onLongClick()</td>
+        <td>setOnLongClickListener()</td>
+    </tr>
+    <tr>
+        <td>觸控</td>
+        <td>OnTouchListener</td>
+        <td>onTouch()</td>
+        <td>setOnTouchListener()</td>
+    </tr>
+</table>
+
+<hr>
+<ul>
+<li>可以使用現成的 Activity類別(即 MainActivity)來實作監聽器介面，不用增加新的監聽類別。</li>
+<li>讓手機震動，可執行<strong>getSystemService(Context.VIBRATOR_SERVICE)</strong> 來取得 Vibrator 震動物件。然後用其vibrate()方法來產生震動。另外,還 必須先在 Android Manifest.xml 中登記 android. permission.VIBRATE 權限才可以使用。</li>
+<li>要監聽整個螢幕的觸控事件，只要修改由 Activity(或 AppCompatActivity) 類別繼承而來的onTouchEvent()方法。</li>
+</ul>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[OnTouchListerner介面中的onTouch()]]></title>
       <url>http://yoursite.com/2017/01/02/OnTouchListerner%E4%BB%8B%E9%9D%A2%E4%B8%AD%E7%9A%84onTouch/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
