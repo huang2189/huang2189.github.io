@@ -4,6 +4,20 @@
   
     
     <entry>
+      <title><![CDATA[OnTouchListerner介面中的onTouch()]]></title>
+      <url>http://yoursite.com/2017/01/02/OnTouchListerner%E4%BB%8B%E9%9D%A2%E4%B8%AD%E7%9A%84onTouch/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h1 id="MotionEvent-ACTION-DOWN-按下去會有的動作"><a href="#MotionEvent-ACTION-DOWN-按下去會有的動作" class="headerlink" title="MotionEvent.ACTION_DOWN--按下去會有的動作"></a>MotionEvent.ACTION_DOWN--按下去會有的動作</h1><p>說明1：<br><strong>onTouch()</strong>必須傳回一個布林值，表示是否要處理接續的觸控事件。<br>如果回傳<strong>false</strong>，表示一直到使用者手指於開為止，才會處理觸控事件。  </p>
+<h3 id="MainActivity-java"><a href="#MainActivity-java" class="headerlink" title="MainActivity.java"></a>MainActivity.java</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">public class MainActivity extends AppCompatActivity implements View.OnTouchListener&#123;</div><div class="line">    @Override</div><div class="line">    public boolean onTouch(View v, MotionEvent e) &#123; //實作onTouchListener觸控監聽器介面的方法</div><div class="line">        Vibrator vb = (Vibrator) getSystemService(</div><div class="line">                Context.VIBRATOR_SERVICE);</div><div class="line">        if (e.getAction() == MotionEvent.ACTION_DOWN) &#123; //按下螢幕中間的文字</div><div class="line">            vb.vibrate(5000);   //震動5秒</div><div class="line">        &#125; else if (e.getAction() == MotionEvent.ACTION_UP) &#123;    //放開螢幕中間的文字</div><div class="line">            vb.cancel();    //停止震動</div><div class="line">        &#125;</div><div class="line">        return true;</div><div class="line">    &#125;</div><div class="line">    ...</div></pre></td></tr></table></figure>
+<p>說明2：
+<strong>要在程式登記震動的使用權限才可以操作。</strong></p>
+<h3 id="AndroidManifest-xml"><a href="#AndroidManifest-xml" class="headerlink" title="AndroidManifest.xml"></a>AndroidManifest.xml</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">&lt;?xml version=&quot;1.0&quot; encoding=&quot;utf-8&quot;?&gt;</div><div class="line">&lt;manifest xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;</div><div class="line">    package=&quot;com.example.huang.ch04_01_massager&quot;&gt;</div><div class="line"></div><div class="line">    &lt;uses-permission android:name=&quot;android.permission.VIBRATE&quot; /&gt;</div><div class="line">    ...</div></pre></td></tr></table></figure>
+<h1 id="MotionEvent-ACTION-MOVE-手指有移動時，會有的動作"><a href="#MotionEvent-ACTION-MOVE-手指有移動時，會有的動作" class="headerlink" title="MotionEvent.ACTION_MOVE--手指有移動時，會有的動作"></a>MotionEvent.ACTION_MOVE--手指有移動時，會有的動作</h1>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android 專案更名 for Android Studio]]></title>
       <url>http://yoursite.com/2016/12/24/Android-%E5%B0%88%E6%A1%88%E6%9B%B4%E5%90%8D-for-Android-Studio/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
