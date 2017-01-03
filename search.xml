@@ -4,6 +4,36 @@
   
     
     <entry>
+      <title><![CDATA[Android架構]]></title>
+      <url>http://yoursite.com/2017/01/03/Android%E6%9E%B6%E6%A7%8B/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文="">
+Android架構分為五個部份：  </the></p>
+<ul>
+<li>Applications (應用程式)</li>
+<li>Application Framework (應用程式架構)</li>
+<li>Libraries (函式庫)</li>
+<li>Android Runtime (Android執行環境)</li>
+<li>Linux Kernel (Linux核心)</li>
+</ul>
+<p><img src="https://i.imgbox.com/ypxsM7GY.jpg" alt="">  </p>
+<ul>
+<li>Android以<strong>Linux</strong>為核心。</li>
+<li><strong>Libraries</strong> (使用的是C/C++的函式庫). 屬系統元件, 開發者可以透過<strong>Application Framwork</strong> 來使用這些功能。</li>
+<li>與Libraries同一層有個 Android Runtime, 其中 Core Libraries 是專門為手機的應用而發展的, 裡頭已經包含了絕大多數Java所需要呼用的函式。</li>
+<li><strong>Dalvik Virtual Machine</strong> (Dalvik虛擬機器, 簡稱 <strong>DVM</strong>) , 是一種暫存器型態(Register Based)的虛擬機器。這可以讓應用程式具有移植性，且Android不是用一個DVM來同時執行多個應用程式，而是每個應用程式都用一個自已的DVM來執行。</li>
+<li><strong>Application Framwork</strong>是讓開發者在寫應用程式時，可以完整的使用標準的應用程式介面。</li>
+<li>易於重覆使用各個元件。</li>
+<li>應用程式可以提供出它自己的特殊功能，也可以較容易的去使用其它程式的特殊功能。這樣的機制有助於開發者去改寫自己新的軟體元件。</li>
+<li>加入新的 <strong>library</strong> 時需要<strong>擴充 application framework</strong>。</li>
+<li>Android framework 以 <strong>JNI</strong> 呼叫下一層的 library，但是 application 不直接呼叫 library，因此讓 Android framework 的設計更嚴謹。</li>
+<li>Applications 都是以以<strong>Java語言</strong>撰寫的應用程式，電子郵件程式、簡訊程式、日曆、地圖、瀏覽器、聯絡人... 等都屬於application (應用程式). 簡單的說就是讓使用者使用這些applications來操作及應用手機功能。</li>
+</ul>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[事件處理]]></title>
       <url>http://yoursite.com/2017/01/02/%E4%BA%8B%E4%BB%B6%E8%99%95%E7%90%86/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
@@ -15,6 +45,7 @@
 <li>介面(Interface)和類別很像，但是它只定義功能的架構而無實質內容。在 Android 的類別庫中,已經提供了各種監聽器介面,以供我們實作出監聽類別 並用來產生監聽物件。</li>
 <li>實作介面和繼承類別很類似,只不過實作介面時是用 implements 關鍵字。 而繼承類別是用 extends</li>
 </ul>
+<p><strong>常見的事件</strong></p>
 <table border="1">
     <tr>
         <th> 事件 </th>
