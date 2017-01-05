@@ -98,7 +98,7 @@ td {
   vertical-align: middle;
 }
 a img {
-  border: none;
+  border: 3;
 }
 ol {
   list-style: decimal;
