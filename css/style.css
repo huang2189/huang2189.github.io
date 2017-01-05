@@ -98,7 +98,7 @@ td {
   vertical-align: middle;
 }
 a img {
-  border: 3;
+  border: none;
 }
 ol {
   list-style: decimal;
@@ -1267,6 +1267,7 @@ color
 .article img {
   max-width: 50%;
   margin: 0.5em auto;
+  border: 3px solid #68b67c;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
