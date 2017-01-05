@@ -586,7 +586,7 @@ a {
 #header .profilepic img {
   width: 100%;
   height: 100%;
-  border-radius: 50%;
+  border-radius: 100%;
   -webkit-animation-duration: 0.4s;
   -moz-animation-duration: 0.4s;
   -ms-animation-duration: 0.4s;
@@ -1265,7 +1265,7 @@ color
   visibility: hidden;
 }
 .article img {
-  max-width: 200%;
+  max-width: 100%;
   margin: 0.5em auto;
 }
 @-webkit-keyframes cd-bounce-1 {
