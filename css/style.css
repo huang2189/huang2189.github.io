@@ -1265,10 +1265,9 @@ color
   visibility: hidden;
 }
 .article img {
-  border:3;
-  border-color: #00B200
   max-width: 50%;
   margin: 1em auto;
+  border: 3;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
