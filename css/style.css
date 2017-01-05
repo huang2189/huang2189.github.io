@@ -1266,7 +1266,7 @@ color
 }
 .article img {
   max-width: 50%;
-  margin: 1em auto;
+  margin: 0.5em auto;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
