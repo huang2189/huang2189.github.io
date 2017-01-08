@@ -15,16 +15,17 @@
 
 
 
-<meta name="description" content="學習中...">
-<meta property="og:type" content="website">
-<meta property="og:title" content="All tags">
-<meta property="og:url" content="http://yoursite.com/tags/index.html">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Oracle時間加減無法顯示正確數值">
+<meta property="og:url" content="http://yoursite.com/2017/01/08/Oracle時間加減無法顯示正確數值/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:description" content="學習中...">
-<meta property="og:updated_time" content="2016-11-15T04:25:16.377Z">
+<meta property="og:image" content="https://i.imgbox.com/2uGVjPEk.png">
+<meta property="og:image" content="https://i.imgbox.com/NDW7fbLO.png">
+<meta property="og:image" content="https://i.imgbox.com/sHJxopr5.png">
+<meta property="og:updated_time" content="2017-01-08T02:59:17.126Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="All tags">
-<meta name="twitter:description" content="學習中...">
+<meta name="twitter:title" content="Oracle時間加減無法顯示正確數值">
+<meta name="twitter:image" content="https://i.imgbox.com/2uGVjPEk.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -56,7 +57,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>All tags | ░ 菜鳥 ░</title>
+<title>Oracle時間加減無法顯示正確數值 | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -66,7 +67,7 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -267,11 +268,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Oracle時間加減無法顯示正確數值" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/tags/index.html" class="article-date">
-      <time datetime="2016-11-15T04:23:37.000Z" itemprop="datePublished">2016-11-15</time>
+      <a href="/2017/01/08/Oracle時間加減無法顯示正確數值/" class="article-date">
+      <time datetime="2017-01-08T02:58:20.000Z" itemprop="datePublished">2017-01-08</time>
 </a>
 
 
@@ -286,7 +287,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      All tags
+      Oracle時間加減無法顯示正確數值
     </h1>
   
 
@@ -294,8 +295,16 @@
       
       <div class="article-info article-info-post">
         
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/oracle/">oracle</a>
+    </div>
+
 
         
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/oracle/">oracle</a></li></ul>
+    </div>
+
         <div class="clearfix"></div>
       </div>
       
@@ -303,96 +312,80 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-              <style>
-    .article-meta { display: none; }
-    #container .article .article-title { padding-right: 0; }
-    .article-header {
-        padding: 0;
-        padding-top: 26px;
-        border-left: none;
-        text-align: center;
-    }
-    .article-header:hover { border-left: none; }
-    .article-title { font-size: 1.6em }
-    .article-entry hr { margin: 0;}
-    .article-meta,
-    #container .article-info-post.article-info { display: none;}
-    #container .article .article-title { padding: 0; }
-</style>
+        <p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文="">
+資料庫：Oracle 11g</the></p>
+<p>在做時間運算時出現如下圖所示  </p>
+<p><img src="https://i.imgbox.com/2uGVjPEk.png" alt="">  </p>
+<p>如果用命令字元視窗會是正常的  </p>
+<p><img src="https://i.imgbox.com/NDW7fbLO.png" alt="">  </p>
+<p>解決：<br>答案算出來是 1833.70468 (除不盡後面應該還有很多小數)，所以 sqlplus (命令視窗) 顯示 1833.70468，但 Oracle SQL Developer 用科學記號表示法 1.8E+03，E+03 是數字還要乘上 10 的 3 次方的意思，所以 Oracle SQL Developer 結果會是 1933.70468... 沒錯，只是顯示用了 1.8E+03 而已。</p>
+<p>如果要取幾週，只想要取到整數，可以這樣下
+SELECT ename, ROUND((SYSDATE - hiredate) / 7, 0) weeks FROM emp WHERE deptno = 10
+想要取到小數第1位，就將 ROUND 裡面的第二參數 0 改成 1 就好，以此類推。  </p>
+<p><img src="https://i.imgbox.com/sHJxopr5.png" alt="">  </p>
+<hr>
 
-
-    <!-- Tag Cloud Page -->
-    <hr>
-<br>
-<ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Eclipse/">Eclipse</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/HTML/">HTML</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Hexo/">Hexo</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/oracle/">oracle</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/windows/">windows</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/文字編輯器/">文字編輯器</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/法律/">法律</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/資料庫/">資料庫</a><span class="category-list-count">7</span></li></ul>
-
-<p class="count"></p>
-
-<div class="tags">
-    <a href="/tags/Android/" style="font-size: 22.33px; color: #555">Android</a> <a href="/tags/AndroidCode/" style="font-size: 16px; color: #808080">AndroidCode</a> <a href="/tags/AndroidStudio/" style="font-size: 28.67px; color: #2b2b2b">AndroidStudio</a> <a href="/tags/Eclipse/" style="font-size: 28.67px; color: #2b2b2b">Eclipse</a> <a href="/tags/HTML/" style="font-size: 16px; color: #808080">HTML</a> <a href="/tags/Hexo/" style="font-size: 16px; color: #808080">Hexo</a> <a href="/tags/MSSQL/" style="font-size: 16px; color: #808080">MSSQL</a> <a href="/tags/SublimeText3/" style="font-size: 22.33px; color: #555">SublimeText3</a> <a href="/tags/oracle/" style="font-size: 35px; color: #000">oracle</a> <a href="/tags/oracle-11g/" style="font-size: 16px; color: #808080">oracle_11g</a> <a href="/tags/oracle練習/" style="font-size: 22.33px; color: #555">oracle練習</a> <a href="/tags/windows10/" style="font-size: 16px; color: #808080">windows10</a> <a href="/tags/windows7/" style="font-size: 16px; color: #808080">windows7</a> <a href="/tags/軟體授權/" style="font-size: 16px; color: #808080">軟體授權</a> <a href="/tags/錯誤訊息/" style="font-size: 16px; color: #808080">錯誤訊息</a> <a href="/tags/雜項/" style="font-size: 16px; color: #808080">雜項</a> <a href="/tags/面試/" style="font-size: 28.67px; color: #2b2b2b">面試</a>
-</div>
-<style>
-    .category-list li{
-        display: inline-block;
-        margin: 0 1em .5em 0;
-        padding: 4px;
-        border: 1px solid lightgray;
-        font-size: 1.2rem;
-    }
-    .category-list a { color: gray; }
-    .category-list-item:hover a {
-        color: gray;
-        text-decoration: none;
-    }
-    .category-list-count {
-        margin-left: 2px;
-        font-size: .9rem;
-    }
-    .article-entry ul li:before{ display: none; }
-    .article-inner { text-align: center; }
-    .tags {
-        max-width: 42em;
-        margin: 2em auto;
-        margin-top: 0em;
-    }
-    .tags a {
-        margin-right: 1em;
-        line-height: 65px;
-        border-bottom: 1px solid gray;
-        white-space: nowrap;
-        transition: border-bottom .5s;
-    }
-    .tags a:hover {
-        border-bottom: 3px dotted gray;
-        text-decoration: none;
-    }
-    #count > span {
-        margin: auto .2em;
-        font-weight: bold;
-    }
-</style>
-
-<!-- Count tags and categories -->
-<p id="count">
-        已有<span><script>document.write($(".category-list-item").length)</script></span>個分類，
-        共計<span><script>document.write($(".tags > a").length)</script></span>個標籤
-</p>
-<script>
-    $('#count').appendTo('.count');
-</script>
-
-          
-        
       
     </div>
     
   </div>
   
     
+    <div class="copyright">
+        <p><span>本文標題:</span><a href="/2017/01/08/Oracle時間加減無法顯示正確數值/">Oracle時間加減無法顯示正確數值</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
+        <p><span>發布時間:</span>2017-01-08, 02:58:20</p>
+        <p><span>最後更新:</span>2017-01-08, 02:59:17</p>
+        <p>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/01/08/Oracle時間加減無法顯示正確數值/" title="Oracle時間加減無法顯示正確數值">http://yoursite.com/2017/01/08/Oracle時間加減無法顯示正確數值/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/08/Oracle時間加減無法顯示正確數值/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文鏈接及作者。
+        </p>
+    </div>
 
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017/01/04/Android-Studio-設定-2-2-3版/">
+                    Android Studio 設定 2.2.3版
+                </a>
+            </div>
+        
+    </nav>
 
   
 </article>
+
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目錄</strong>
+        
+            
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
+
+    <script>
+        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
+    </script>
 
 
 
@@ -410,7 +403,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"All tags　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Oracle時間加減無法顯示正確數值　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -426,7 +419,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="tags/index.html" data-title="All tags" data-url="http://yoursite.com/tags/index.html"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/08/Oracle時間加減無法顯示正確數值/" data-title="Oracle時間加減無法顯示正確數值" data-url="http://yoursite.com/2017/01/08/Oracle時間加減無法顯示正確數值/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -444,6 +437,24 @@
 </div>
     
 
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2017/01/04/Android-Studio-設定-2-2-3版/" title="下一篇: Android Studio 設定 2.2.3版">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/01/08/Oracle時間加減無法顯示正確數值/">Oracle時間加減無法顯示正確數值</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/04/Android-Studio-設定-2-2-3版/">Android Studio 設定 2.2.3版</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/03/Android架構/">Android架構</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/02/事件處理/">事件處理</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/01/02/OnTouchListerner介面中的onTouch/">OnTouchListerner介面中的onTouch()</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/24/Android-專案更名-for-Android-Studio/">Android 專案更名 for Android Studio</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/23/Android-Studio安裝/">Android Studio安裝</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/23/Oracle練習-設定查詢條件與資料排序/">Oracle練習--設定查詢條件與資料排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/22/Oracle資料查詢-設定查詢條件與資料排序/">Oracle資料查詢--設定查詢條件與資料排序</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Oracle練習-簡單查詢/">Oracle練習--簡單查詢</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/21/Oracle資料查詢-簡單查詢/">Oracle資料查詢--簡單查詢</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/20/關聯式資料庫管理系統-RDBMS/">關聯式資料庫管理系統(RDBMS)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/資料庫與檔案系統比較/">資料庫與檔案系統比較</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/HTML字符實體（Character-Entities），轉義字符串（Escape-Sequence/">HTML字符實體（Character Entities），轉義字符串（Escape Sequence)</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/19/用鍵盤打出特殊符號/">用鍵盤打出特殊符號</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/安裝Oracle-Server-及-SQL-Developer/">安裝Oracle Server 及 SQL Developer</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/Sublime-Text3-套件/">Sublime Text3 套件</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/18/安裝Sublime-Text3/">安裝Sublime Text3</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/16/windows7升級成windows10之後的問題/">windows7升級成windows10之後的問題</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/11/微軟軟體授權/">微軟軟體授權</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/10/SQL-Server-安裝/">SQL Server 安裝</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/08/Eclipse-常用的快捷鍵/">Eclipse 常用的快捷鍵</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/05/中文亂碼：環境編碼設定/">中文亂碼：環境編碼設定</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/03/讓網頁選擇在瀏覽器上運行/">讓網頁選擇在瀏覽器上運行</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/12/03/20161203-01/">ORA-28000:the account is locked</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/11/12/Hexo-架站/">Hexo 架站</a></li></ul>
 
 
 

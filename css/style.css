@@ -1265,9 +1265,8 @@ color
   visibility: hidden;
 }
 .article img {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0.5em auto;
-  border: 5px outset #68b67c;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {

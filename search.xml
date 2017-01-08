@@ -4,6 +4,26 @@
   
     
     <entry>
+      <title><![CDATA[Oracle時間加減無法顯示正確數值]]></title>
+      <url>http://yoursite.com/2017/01/08/Oracle%E6%99%82%E9%96%93%E5%8A%A0%E6%B8%9B%E7%84%A1%E6%B3%95%E9%A1%AF%E7%A4%BA%E6%AD%A3%E7%A2%BA%E6%95%B8%E5%80%BC/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文="">
+資料庫：Oracle 11g</the></p>
+<p>在做時間運算時出現如下圖所示  </p>
+<p><img src="https://i.imgbox.com/2uGVjPEk.png" alt="">  </p>
+<p>如果用命令字元視窗會是正常的  </p>
+<p><img src="https://i.imgbox.com/NDW7fbLO.png" alt="">  </p>
+<p>解決：<br>答案算出來是 1833.70468 (除不盡後面應該還有很多小數)，所以 sqlplus (命令視窗) 顯示 1833.70468，但 Oracle SQL Developer 用科學記號表示法 1.8E+03，E+03 是數字還要乘上 10 的 3 次方的意思，所以 Oracle SQL Developer 結果會是 1933.70468... 沒錯，只是顯示用了 1.8E+03 而已。</p>
+<p>如果要取幾週，只想要取到整數，可以這樣下
+SELECT ename, ROUND((SYSDATE - hiredate) / 7, 0) weeks FROM emp WHERE deptno = 10
+想要取到小數第1位，就將 ROUND 裡面的第二參數 0 改成 1 就好，以此類推。  </p>
+<p><img src="https://i.imgbox.com/sHJxopr5.png" alt="">  </p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android Studio 設定 2.2.3版]]></title>
       <url>http://yoursite.com/2017/01/04/Android-Studio-%E8%A8%AD%E5%AE%9A-2-2-3%E7%89%88/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
