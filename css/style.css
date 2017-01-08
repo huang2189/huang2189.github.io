@@ -1267,6 +1267,8 @@ color
 .article img {
   max-width: 50%;
   margin: 0.5em auto;
+  border-style:outset;
+  border-color: #00C400;
 }
 @-webkit-keyframes cd-bounce-1 {
   0% {
