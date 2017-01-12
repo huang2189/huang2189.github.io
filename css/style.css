@@ -1403,6 +1403,7 @@ color
 }
 .article-entry strong {
   font-weight: bold;
+  font-family: "Segoe UI", "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
 .article-entry li strong {
   color: #04294d;
