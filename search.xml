@@ -4,6 +4,28 @@
   
     
     <entry>
+      <title><![CDATA[Eclipse: Tomcat Embedded]]></title>
+      <url>http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<ul>
+<li>要將Tomcat嵌入Eclipse之前，要先將資料庫驅動程式<strong>ojdbc6.jar檔</strong>複製到Tomcatxxx\lib內，每個版本的Server會有不同的目錄位置。</li>
+<li>..\javawork<em>jdbc\DRIVER(驅動程式</em>及Oracle11gXE_及Table建立)\DRIVER_JDBC4.0(較新)</li>
+</ul>
+<p><img src="https://i.imgbox.com/x9woXrXJ.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/Wd7GBdBB.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/BYK6e1I0.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/6feEOfBF.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/bV98eUnj.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/LMxT3OF3.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/Q7cBqdGT.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/PFt5zPa2.jpg" alt="">  </p>
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[好用的線上工具]]></title>
       <url>http://yoursite.com/2017/01/10/%E5%A5%BD%E7%94%A8%E7%9A%84%E7%B7%9A%E4%B8%8A%E5%B7%A5%E5%85%B7/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">

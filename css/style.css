@@ -1265,7 +1265,7 @@ color
   visibility: hidden;
 }
 .article img {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0.5em auto;
 }
 @-webkit-keyframes cd-bounce-1 {
@@ -1403,10 +1403,9 @@ color
 }
 .article-entry strong {
   font-weight: bold;
-  font-family: "Segoe UI", "Lucida Grande", Verdana, "Helvetica Neue", Arial, "Microsoft YaHei", "PingFang SC", "Hiragino Sans GB", "WenQuanYi Micro Hei", sans-serif;
 }
 .article-entry li strong {
-  color: #04294d;
+  color: #708090;
 }
 .article-entry .caption {
   display: block;

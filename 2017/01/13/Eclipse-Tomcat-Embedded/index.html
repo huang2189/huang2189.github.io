@@ -16,12 +16,21 @@
 
 
 <meta property="og:type" content="article">
-<meta property="og:title" content="事件處理">
-<meta property="og:url" content="http://yoursite.com/2017/01/02/事件處理/index.html">
+<meta property="og:title" content="Eclipse: Tomcat Embedded">
+<meta property="og:url" content="http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/index.html">
 <meta property="og:site_name" content="░ 菜鳥 ░">
-<meta property="og:updated_time" content="2017-01-02T14:21:07.535Z">
+<meta property="og:image" content="https://i.imgbox.com/x9woXrXJ.jpg">
+<meta property="og:image" content="https://i.imgbox.com/Wd7GBdBB.jpg">
+<meta property="og:image" content="https://i.imgbox.com/BYK6e1I0.jpg">
+<meta property="og:image" content="https://i.imgbox.com/6feEOfBF.jpg">
+<meta property="og:image" content="https://i.imgbox.com/bV98eUnj.jpg">
+<meta property="og:image" content="https://i.imgbox.com/LMxT3OF3.jpg">
+<meta property="og:image" content="https://i.imgbox.com/Q7cBqdGT.jpg">
+<meta property="og:image" content="https://i.imgbox.com/PFt5zPa2.jpg">
+<meta property="og:updated_time" content="2017-01-13T16:37:39.338Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="事件處理">
+<meta name="twitter:title" content="Eclipse: Tomcat Embedded">
+<meta name="twitter:image" content="https://i.imgbox.com/x9woXrXJ.jpg">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -53,7 +62,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>事件處理 | ░ 菜鳥 ░</title>
+<title>Eclipse: Tomcat Embedded | ░ 菜鳥 ░</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -264,11 +273,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情鏈接" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-事件處理" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Eclipse-Tomcat-Embedded" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/01/02/事件處理/" class="article-date">
-      <time datetime="2017-01-02T14:16:17.000Z" itemprop="datePublished">2017-01-02</time>
+      <a href="/2017/01/13/Eclipse-Tomcat-Embedded/" class="article-date">
+      <time datetime="2017-01-13T16:36:32.000Z" itemprop="datePublished">2017-01-13</time>
 </a>
 
 
@@ -283,7 +292,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      事件處理
+      Eclipse: Tomcat Embedded
     </h1>
   
 
@@ -292,13 +301,13 @@
       <div class="article-info article-info-post">
         
     <div class="article-category tagcloud">
-    <a class="article-category-link" href="/categories/Android/">Android</a>
+    <a class="article-category-link" href="/categories/Eclipse/">Eclipse</a>
     </div>
 
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Eclipse/">Eclipse</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -312,45 +321,17 @@
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
 <ul>
-<li>使用者對手機進行各種操作時，會產生事件(Event)，藉由撰寫各種事件的處理程式，來和使用者進行互動。</li>
-<li>事件發生的來源,稱為該事件的來源物件。先建立一個監聽物件(監聽器,Listener)，然後將之登錄到來源物件中。</li>
-<li>介面(Interface)和類別很像，但是它只定義功能的架構而無實質內容。在 Android 的類別庫中,已經提供了各種監聽器介面,以供我們實作出監聽類別 並用來產生監聽物件。</li>
-<li>實作介面和繼承類別很類似,只不過實作介面時是用 implements 關鍵字。 而繼承類別是用 extends</li>
+<li>要將Tomcat嵌入Eclipse之前，要先將資料庫驅動程式<strong>ojdbc6.jar檔</strong>複製到Tomcatxxx\lib內，每個版本的Server會有不同的目錄位置。</li>
+<li>..\javawork<em>jdbc\DRIVER(驅動程式</em>及Oracle11gXE_及Table建立)\DRIVER_JDBC4.0(較新)</li>
 </ul>
-<p><strong>常見的事件</strong></p>
-<table border="1">
-    <tr>
-        <th> 事件 </th>
-        <th> 監聽器介面 </th>
-        <th> 介面中的方法 </th>
-        <th> 註冊到來源物件的方法 </th>
-    </tr>
-    <tr>
-        <td>按一下</td>
-        <td>OnClickListener</td>
-        <td>onClick()</td>
-        <td>setOnClickListener()</td>
-    </tr>
-    <tr>
-        <td>長按</td>
-        <td>OnLongClickListener</td>
-        <td>onLongClick()</td>
-        <td>setOnLongClickListener()</td>
-    </tr>
-    <tr>
-        <td>觸控</td>
-        <td>OnTouchListener</td>
-        <td>onTouch()</td>
-        <td>setOnTouchListener()</td>
-    </tr>
-</table>
-
-<hr>
-<ul>
-<li>可以使用現成的 Activity類別(即 MainActivity)來實作監聽器介面，不用增加新的監聽類別。</li>
-<li>讓手機震動，可執行<strong>getSystemService(Context.VIBRATOR_SERVICE)</strong> 來取得 Vibrator 震動物件。然後用其vibrate()方法來產生震動。另外,還 必須先在 Android Manifest.xml 中登記 android. permission.VIBRATE 權限才可以使用。</li>
-<li>要監聽整個螢幕的觸控事件，只要修改由 Activity(或 AppCompatActivity) 類別繼承而來的onTouchEvent()方法。</li>
-</ul>
+<p><img src="https://i.imgbox.com/x9woXrXJ.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/Wd7GBdBB.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/BYK6e1I0.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/6feEOfBF.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/bV98eUnj.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/LMxT3OF3.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/Q7cBqdGT.jpg" alt="">  </p>
+<p><img src="https://i.imgbox.com/PFt5zPa2.jpg" alt="">  </p>
 <hr>
 
       
@@ -360,13 +341,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2017/01/02/事件處理/">事件處理</a></p>
+        <p><span>本文標題:</span><a href="/2017/01/13/Eclipse-Tomcat-Embedded/">Eclipse: Tomcat Embedded</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Huang2189</a></p>
-        <p><span>發布時間:</span>2017-01-02, 14:16:17</p>
-        <p><span>最後更新:</span>2017-01-02, 14:21:07</p>
+        <p><span>發布時間:</span>2017-01-13, 16:36:32</p>
+        <p><span>最後更新:</span>2017-01-13, 16:37:39</p>
         <p>
-            <span>原始鏈接:</span><a class="post-url" href="/2017/01/02/事件處理/" title="事件處理">http://yoursite.com/2017/01/02/事件處理/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/02/事件處理/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
+            <span>原始鏈接:</span><a class="post-url" href="/2017/01/13/Eclipse-Tomcat-Embedded/" title="Eclipse: Tomcat Embedded">http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/　　作者: Huang2189" title="點擊複製文章鏈接"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -378,16 +359,10 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017/01/03/Android架構/">
-                    Android架構
-                </a>
-            </div>
-        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/01/02/OnTouchListerner介面中的onTouch/">
-                    OnTouchListerner介面中的onTouch()
+                <a href="/2017/01/10/好用的線上工具/">
+                    好用的線上工具
                 </a>
             </div>
         
@@ -435,7 +410,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"事件處理　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Eclipse: Tomcat Embedded　| ░ 菜鳥 ░　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -451,7 +426,7 @@
     
       <div class="duoshuo" id="comments">
     <div id="comment-box" ></div>
-    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/02/事件處理/" data-title="事件處理" data-url="http://yoursite.com/2017/01/02/事件處理/"></div>
+    <div class="ds-thread" id="ds-thread" data-thread-key="2017/01/13/Eclipse-Tomcat-Embedded/" data-title="Eclipse: Tomcat Embedded" data-url="http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/"></div>
     <script>
         var duoshuoQuery = {short_name:"huang2189"};
         var loadComment = function(){
@@ -474,15 +449,13 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/2017/01/03/Android架構/" title="上一篇: Android架構">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/01/02/OnTouchListerner介面中的onTouch/" title="下一篇: OnTouchListerner介面中的onTouch()">
+            <a href="/2017/01/10/好用的線上工具/" title="下一篇: 好用的線上工具">
                 <i class="fa fa-angle-right"></i>
             </a>
         
