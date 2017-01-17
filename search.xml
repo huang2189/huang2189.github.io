@@ -247,11 +247,14 @@ Android架構分為五個部份：  </the></p>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
 <p><the rest="" of="" contents="" |="" 全文=""></the></p>
-<h1 id="套件需求-安裝、下載"><a href="#套件需求-安裝、下載" class="headerlink" title="套件需求 - 安裝、下載"></a>套件需求 - 安裝、下載</h1><ul>
-<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=jdk+download" target="_blank" rel="external">JDK</a></li>
-<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=android+studio+download" target="_blank" rel="external">Android Studio</a> -- 開發環境經常在更動，可能會有所不同。  </li>
+<h1 id="套件需求-下載、安裝"><a href="#套件需求-下載、安裝" class="headerlink" title="套件需求 - 下載、安裝"></a>套件需求 - 下載、安裝</h1><ul>
+<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=jdk+download" target="_blank" rel="external">JDK</a>--JDK安裝好才可以安裝Android Studio。</li>
+<li><a href="https://www.google.com.tw/webhp?sourceid=chrome-instant&amp;ion=1&amp;espv=2&amp;ie=UTF-8#q=android+studio+download" target="_blank" rel="external">Android Studio</a> -- 開發軟體經常在更新，可能會有所不同。  </li>
 </ul>
-<h1 id="設定-java-home-環境變數"><a href="#設定-java-home-環境變數" class="headerlink" title="設定 java_home 環境變數"></a>設定 java_home 環境變數</h1><p><strong>安裝完 JDK 後</strong>, 還必須設定 <strong>java_home 環境變數</strong>, 讓其他程式可以找到 JDK 的安裝路徑。  </p>
+<h1 id="設定-java-home-環境變數"><a href="#設定-java-home-環境變數" class="headerlink" title="設定 java_home 環境變數"></a>設定 java_home 環境變數</h1><ul>
+<li>先安裝JDK</li>
+</ul>
+<p><strong>安裝完 JDK 後</strong>, 還必須設定 <strong>java_home 環境變數</strong>, 讓其他程式可以找到 JDK 的安裝路徑。  </p>
 <ul>
 <li><strong>先找到JDK安裝的路徑</strong>，並且把路徑拷貝起來。  </li>
 </ul>
@@ -267,6 +270,21 @@ Android架構分為五個部份：  </the></p>
 <p>Android Studio 的安裝都是使用預設，安裝時間會有點久。  </p>
 <p><img src="https://i.imgbox.com/r0ImLbOf.png" alt="">  </p>
 <p><img src="https://i.imgbox.com/fuChpz9A.png" alt="">  </p>
+<h1 id="Android-Studio安裝後的設定"><a href="#Android-Studio安裝後的設定" class="headerlink" title="Android Studio安裝後的設定"></a>Android Studio安裝後的設定</h1><p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
+<p><strong>右下方的 Configure --&gt; SDK Manager --&gt;下方的 Launch Standalone SDK Manager</strong>  </p>
+<p><img src="https://i.imgbox.com/CUNacuMK.png" alt="">  </p>
+<p><img src="https://i.imgbox.com/tNMWgZtk.png" alt="">  </p>
+<p>勾選完，按右下角的<strong>Install</strong>  </p>
+<p><img src="https://i.imgbox.com/vY20xCBU.jpg" alt="">  </p>
+<h1 id="更改快捷鍵組-改成Eclipse的快捷鍵"><a href="#更改快捷鍵組-改成Eclipse的快捷鍵" class="headerlink" title="更改快捷鍵組 -- 改成Eclipse的快捷鍵"></a>更改快捷鍵組 -- 改成Eclipse的快捷鍵</h1><p><strong>右下方的 Configure --&gt; Settings</strong>  </p>
+<p><img src="https://i.imgbox.com/eyL50BkG.png" alt="">  </p>
+<h1 id="將語系改成-UTF-8"><a href="#將語系改成-UTF-8" class="headerlink" title="將語系改成 UTF-8"></a>將語系改成 UTF-8</h1><p><img src="https://i.imgbox.com/hJFlurWP.png" alt="">  </p>
+<h1 id="當滑鼠移動到方法名稱上的時候會有提示文字"><a href="#當滑鼠移動到方法名稱上的時候會有提示文字" class="headerlink" title="當滑鼠移動到方法名稱上的時候會有提示文字"></a>當滑鼠移動到方法名稱上的時候會有提示文字</h1><p><img src="https://i.imgbox.com/YTwEz7Th.png" alt="">  </p>
+<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p><strong>顯示方法分隔符</strong><br><strong>顯示空格</strong>  </p>
+<p><img src="https://i.imgbox.com/ByjHcp0J.png" alt="">  </p>
+<p><strong>optimize imports on the fly</strong><br><strong>add unambiguous imports on the fly</strong>  </p>
+<p><img src="https://i.imgbox.com/Pnz4rLlw.png" alt="">  </p>
+<hr>
 <h1 id="新增專案"><a href="#新增專案" class="headerlink" title="新增專案"></a>新增專案</h1><p>選擇第一個可以新增專案  </p>
 <p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
 <p>Application name：應用程式名稱。這個名稱會顯示在手機畫面。<br>Company Domain：可輸入可不輸入，也可用預設。
