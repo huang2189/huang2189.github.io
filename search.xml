@@ -78,7 +78,27 @@ SELECT ename, ROUND((SYSDATE - hiredate) / 7, 0) weeks FROM emp WHERE deptno = 1
       <url>http://yoursite.com/2017/01/04/Android-Studio-%E8%A8%AD%E5%AE%9A-2-2-3%E7%89%88/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
 <a id="more"></a></excerpt></p>
-<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<the rest="" of="" contents="" |="" 全文="">
+
+<h1 id="Android-Studio安裝後的設定"><a href="#Android-Studio安裝後的設定" class="headerlink" title="Android Studio安裝後的設定"></a>Android Studio安裝後的設定</h1><p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
+<p><strong>右下方的 Configure --&gt; SDK Manager --&gt;下方的 Launch Standalone SDK Manager</strong>  </p>
+<p><img src="https://i.imgbox.com/CUNacuMK.png" alt="">  </p>
+<p><img src="https://i.imgbox.com/tNMWgZtk.png" alt="">  </p>
+<p>勾選完，按右下角的<strong>Install</strong>  </p>
+<p><img src="https://i.imgbox.com/vY20xCBU.jpg" alt="">  </p>
+<hr>
+<h1 id="更改快捷鍵組-改成Eclipse的快捷鍵"><a href="#更改快捷鍵組-改成Eclipse的快捷鍵" class="headerlink" title="更改快捷鍵組 -- 改成Eclipse的快捷鍵"></a>更改快捷鍵組 -- 改成Eclipse的快捷鍵</h1><p><strong>右下方的 Configure --&gt; Settings</strong>  </p>
+<p><img src="https://i.imgbox.com/eyL50BkG.png" alt="">  </p>
+<hr>
+<h1 id="將語系改成-UTF-8"><a href="#將語系改成-UTF-8" class="headerlink" title="將語系改成 UTF-8"></a>將語系改成 UTF-8</h1><p><img src="https://i.imgbox.com/hJFlurWP.png" alt="">  </p>
+<hr>
+<h1 id="當滑鼠移動到方法名稱上的時候會有提示文字"><a href="#當滑鼠移動到方法名稱上的時候會有提示文字" class="headerlink" title="當滑鼠移動到方法名稱上的時候會有提示文字"></a>當滑鼠移動到方法名稱上的時候會有提示文字</h1><p><img src="https://i.imgbox.com/YTwEz7Th.png" alt="">  </p>
+<hr>
+<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p><strong>顯示方法分隔符</strong><br><strong>顯示空格</strong>  </p>
+<p><img src="https://i.imgbox.com/ByjHcp0J.png" alt="">  </p>
+<p><strong>optimize imports on the fly</strong><br><strong>add unambiguous imports on the fly</strong>  </p>
+<p><img src="https://i.imgbox.com/Pnz4rLlw.png" alt="">  </p>
+<hr>
 <h1 id="黑色背景主題：Darcula"><a href="#黑色背景主題：Darcula" class="headerlink" title="黑色背景主題：Darcula"></a>黑色背景主題：Darcula</h1><ol>
 <li>File --&gt; Settings --&gt; Editor --&gt; Colors &amp; Fonts --&gt; </li>
 <li>設定成:: Scheme name: Darcula</li>
@@ -100,14 +120,7 @@ SELECT ename, ROUND((SYSDATE - hiredate) / 7, 0) weeks FROM emp WHERE deptno = 1
 </ol>
 <p><img src="https://i.imgbox.com/W5VvESpB.png" alt=""></p>
 <hr>
-<h1 id="UTF-8-文件編碼設定"><a href="#UTF-8-文件編碼設定" class="headerlink" title="UTF-8 文件編碼設定"></a>UTF-8 文件編碼設定</h1><ol>
-<li>File --&gt; File Encodings  </li>
-</ol>
-<p>一開始就將專案編碼格式設為UTF-8，可防止亂碼問題。  </p>
-<p><img src="https://i.imgbox.com/BNvnABUl.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/Y1vLX5Mr.png" alt="">  </p>
-<hr>
-]]></content>
+</the>]]></content>
     </entry>
     
     <entry>
@@ -270,20 +283,6 @@ Android架構分為五個部份：  </the></p>
 <p>Android Studio 的安裝都是使用預設，安裝時間會有點久。  </p>
 <p><img src="https://i.imgbox.com/r0ImLbOf.png" alt="">  </p>
 <p><img src="https://i.imgbox.com/fuChpz9A.png" alt="">  </p>
-<h1 id="Android-Studio安裝後的設定"><a href="#Android-Studio安裝後的設定" class="headerlink" title="Android Studio安裝後的設定"></a>Android Studio安裝後的設定</h1><p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
-<p><strong>右下方的 Configure --&gt; SDK Manager --&gt;下方的 Launch Standalone SDK Manager</strong>  </p>
-<p><img src="https://i.imgbox.com/CUNacuMK.png" alt="">  </p>
-<p><img src="https://i.imgbox.com/tNMWgZtk.png" alt="">  </p>
-<p>勾選完，按右下角的<strong>Install</strong>  </p>
-<p><img src="https://i.imgbox.com/vY20xCBU.jpg" alt="">  </p>
-<h1 id="更改快捷鍵組-改成Eclipse的快捷鍵"><a href="#更改快捷鍵組-改成Eclipse的快捷鍵" class="headerlink" title="更改快捷鍵組 -- 改成Eclipse的快捷鍵"></a>更改快捷鍵組 -- 改成Eclipse的快捷鍵</h1><p><strong>右下方的 Configure --&gt; Settings</strong>  </p>
-<p><img src="https://i.imgbox.com/eyL50BkG.png" alt="">  </p>
-<h1 id="將語系改成-UTF-8"><a href="#將語系改成-UTF-8" class="headerlink" title="將語系改成 UTF-8"></a>將語系改成 UTF-8</h1><p><img src="https://i.imgbox.com/hJFlurWP.png" alt="">  </p>
-<h1 id="當滑鼠移動到方法名稱上的時候會有提示文字"><a href="#當滑鼠移動到方法名稱上的時候會有提示文字" class="headerlink" title="當滑鼠移動到方法名稱上的時候會有提示文字"></a>當滑鼠移動到方法名稱上的時候會有提示文字</h1><p><img src="https://i.imgbox.com/YTwEz7Th.png" alt="">  </p>
-<h1 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h1><p><strong>顯示方法分隔符</strong><br><strong>顯示空格</strong>  </p>
-<p><img src="https://i.imgbox.com/ByjHcp0J.png" alt="">  </p>
-<p><strong>optimize imports on the fly</strong><br><strong>add unambiguous imports on the fly</strong>  </p>
-<p><img src="https://i.imgbox.com/Pnz4rLlw.png" alt="">  </p>
 <hr>
 <h1 id="新增專案"><a href="#新增專案" class="headerlink" title="新增專案"></a>新增專案</h1><p>選擇第一個可以新增專案  </p>
 <p><img src="https://i.imgbox.com/rk8zwtQa.png" alt="">  </p>
