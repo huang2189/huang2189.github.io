@@ -1020,7 +1020,7 @@ a {
   background: rgba(147,181,224,0.3) !important;
 }
 .scroll a:hover .fa {
-  color: #fff;
+  color: #6C6C6C;
 }
 .scroll a:not(:last-child) {
   border-bottom: 1px solid #fff;
