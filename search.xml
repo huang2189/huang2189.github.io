@@ -44,22 +44,22 @@
     <tr>
         <td>byte</td>
         <td>1byte</td>
-        <td>$2-2^7$~$2^7$-1</td>
+        <td>-2<sup>7</sup>~2<sup>7</sup>-1</td>
     </tr>
     <tr>
         <td>short</td>
         <td>2bytes</td>
-        <td>$-2^{31}$~$2^{15}$-1</td>
+        <td>-2<sup>31</sup>~2<sup>15</sup>-1</td>
     </tr>
     <tr>
         <td>int</td>
         <td>4bytes</td>
-        <td>$-2^{31}$~$2^{63}$-1</td>
+        <td>-2<sup>31</sup>~2<sup>63</sup>-1</td>
     </tr>
     <tr>
         <td>long</td>
         <td>8byte</td>
-        <td>$-2^{63}$~$2^{63}$-1</td>
+        <td>-2<sup>63</sup>~2<sup>63</sup>-1</td>
     </tr>
 </table>
 
@@ -76,13 +76,13 @@
         <td>float</td>
         <td>4byte</td>
         <td>7</td>
-        <td>-3.4<em>$10^{38}$~3.4</em>$10^{38}$</td>
+        <td>-3.4<em>10<sup>38</sup>~3.4</em>10<sup>38</sup></td>
     </tr>
     <tr>
         <td>double</td>
         <td>8bytes</td>
         <td>15</td>
-        <td>-1.8<em>$10^{308}$~1.8</em>$10^{308}$</td>
+        <td>-1.8<em>10<sup>308</sup>~1.8</em>10<sup>308</sup></td>
     </tr>
 </table>
 
@@ -97,7 +97,7 @@
     <tr>
         <td>boolean</td>
         <td>1byte</td>
-        <td>-3.4<em>$10^{38}$~3.4</em>$10^{38}$</td>
+        <td>-3.4<em>10<sup>38</sup>~3.4</em>10<sup>38</sup></td>
     </tr><br></table>
 
 <hr>
@@ -115,14 +115,7 @@
     </tr><br></table>
 
 <hr>
-<h1 id="跳脫字元-Escape-Character"><a href="#跳脫字元-Escape-Character" class="headerlink" title="跳脫字元(Escape Character)"></a>跳脫字元(Escape Character)</h1><p><code>\</code> <strong>取消</strong>單引號原來功能,成為單純文字
-<code>\&quot;</code> <strong>取消</strong>雙引號原來功能,成為單純文字 
-<code>\\</code> <strong>取消</strong>反斜線原來功能,成為單純文字
-<code>\n</code> 換行 
-<code>\t</code> 相當於按tab鍵
-<code>\b</code> 相當於按倒退鍵 
-<code>\r</code> 相當於按return鍵 
-<code>\f</code> 換頁</p>
+<h1 id="跳脫字元-Escape-Character"><a href="#跳脫字元-Escape-Character" class="headerlink" title="跳脫字元(Escape Character)"></a>跳脫字元(Escape Character)</h1><p><code>\</code> <strong>取消</strong>單引號原來功能,成為單純文字<br><code>\&quot;</code> <strong>取消</strong>雙引號原來功能,成為單純文字<br><code>\\</code> <strong>取消</strong>反斜線原來功能,成為單純文字<br><code>\n</code> 換行<br><code>\t</code> 相當於按tab鍵<br><code>\b</code> 相當於按倒退鍵<br><code>\r</code> 相當於按return鍵<br><code>\f</code> 換頁  </p>
 <hr>
 <h1 id="基本類型的轉型"><a href="#基本類型的轉型" class="headerlink" title="基本類型的轉型"></a>基本類型的轉型</h1><ul>
 <li>自動轉型--隱含轉型(Implicit casting) -- 由小到大：<ul>
