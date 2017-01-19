@@ -4,6 +4,183 @@
   
     
     <entry>
+      <title><![CDATA[Java 基礎]]></title>
+      <url>http://yoursite.com/2017/01/19/Java-%E5%9F%BA%E7%A4%8E/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<p><the rest="" of="" contents="" |="" 全文=""></the></p>
+<h1 id="Java-基本型態"><a href="#Java-基本型態" class="headerlink" title="Java 基本型態"></a>Java 基本型態</h1><p>Java 基本型態：<strong>整數</strong>、<strong>位元組</strong>、<strong>浮點數</strong>、<strong>字元</strong>與<strong>布林</strong>。</p>
+<h2 id="整數"><a href="#整數" class="headerlink" title="整數"></a>整數</h2><table>
+    <tr>
+        <th> 類型 </th>
+        <th> 佔記憶體 </th>
+        <th> 範圍 </th>
+    </tr>
+    <tr>
+        <td>byte</td>
+        <td>1byte</td>
+        <td>$2-2^7$~$2^7$-1</td>
+    </tr>
+    <tr>
+        <td>short</td>
+        <td>2bytes</td>
+        <td>$-2^{31}$~$2^{15}$-1</td>
+    </tr>
+    <tr>
+        <td>int</td>
+        <td>4bytes</td>
+        <td>$-2^{31}$~$2^{63}$-1</td>
+    </tr>
+    <tr>
+        <td>long</td>
+        <td>8byte</td>
+        <td>$-2^{63}$~$2^{63}$-1</td>
+    </tr>
+</table>
+
+<hr>
+<h2 id="浮點數"><a href="#浮點數" class="headerlink" title="浮點數"></a>浮點數</h2><p>浮點數指的是小數<br>double是預設浮點數  </p>
+<table>
+    <tr>
+        <th> 類型 </th>
+        <th> 佔記憶體 </th>
+        <th> 可儲存的小數位數 </th>
+        <th> 範圍 </th>
+    </tr>
+    <tr>
+        <td>float</td>
+        <td>4byte</td>
+        <td>7</td>
+        <td>-3.4<em>$10^{38}$~3.4</em>$10^{38}$</td>
+    </tr>
+    <tr>
+        <td>double</td>
+        <td>8bytes</td>
+        <td>15</td>
+        <td>-1.8<em>$10^{308}$~1.8</em>$10^{308}$</td>
+    </tr>
+</table>
+
+<hr>
+<h2 id="布林"><a href="#布林" class="headerlink" title="布林"></a>布林</h2><p>布林值，只有true與false  </p>
+<table>
+    <tr>
+        <th> 類型 </th>
+        <th> 佔記憶體 </th>
+        <th> 範圍 </th>
+    </tr>
+    <tr>
+        <td>boolean</td>
+        <td>1byte</td>
+        <td>-3.4<em>$10^{38}$~3.4</em>$10^{38}$</td>
+    </tr><br></table>
+
+<hr>
+<h2 id="字元"><a href="#字元" class="headerlink" title="字元"></a>字元</h2><p>字元只能存1個字，且必須以單引號框住  </p>
+<table>
+    <tr>
+        <th> 類型 </th>
+        <th> 佔記憶體 </th>
+        <th> 範圍 </th>
+    </tr>
+    <tr>
+        <td>char</td>
+        <td>2bytes</td>
+        <td>&#39;\u0000&#39;~&#39;\uffff&#39;</td>
+    </tr><br></table>
+
+<hr>
+<h1 id="跳脫字元-Escape-Character"><a href="#跳脫字元-Escape-Character" class="headerlink" title="跳脫字元(Escape Character)"></a>跳脫字元(Escape Character)</h1><p><code>\</code> <strong>取消</strong>單引號原來功能,成為單純文字
+<code>\&quot;</code> <strong>取消</strong>雙引號原來功能,成為單純文字 
+<code>\\</code> <strong>取消</strong>反斜線原來功能,成為單純文字
+<code>\n</code> 換行 
+<code>\t</code> 相當於按tab鍵
+<code>\b</code> 相當於按倒退鍵 
+<code>\r</code> 相當於按return鍵 
+<code>\f</code> 換頁</p>
+<hr>
+<h1 id="基本類型的轉型"><a href="#基本類型的轉型" class="headerlink" title="基本類型的轉型"></a>基本類型的轉型</h1><ul>
+<li>自動轉型--隱含轉型(Implicit casting) -- 由小到大：<ul>
+<li>int --&gt; long --&gt; float --&gt; double</li>
+</ul>
+</li>
+<li>強迫轉型 -- 由大到小<ul>
+<li>double --&gt; float --&gt; long --&gt; int</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">int i = 1; </div><div class="line">double d = 11.1;</div><div class="line">double sum1 =i+d;</div><div class="line">int sum2 = (int)(i+d);</div><div class="line">System. Out. println (suml);</div><div class="line">System. Out. println (sum2);</div><div class="line">//結果</div><div class="line">12.1</div><div class="line">12</div></pre></td></tr></table></figure>
+<hr>
+<h1 id="命名規則"><a href="#命名規則" class="headerlink" title="命名規則"></a>命名規則</h1><ul>
+<li>不可以以<strong>數字開頭</strong></li>
+<li>不可使用<strong>特殊字元</strong></li>
+<li>不可使用<strong>關鍵字命名</strong></li>
+<li>不可使用<strong>保留字命名</strong></li>
+<li>建議<strong>使用駝峰式命名法</strong>  </li>
+</ul>
+<hr>
+<h1 id="基本運算符號"><a href="#基本運算符號" class="headerlink" title="基本運算符號"></a>基本運算符號</h1><h2 id="算術運算子"><a href="#算術運算子" class="headerlink" title="算術運算子"></a>算術運算子</h2><p>Java 的算術運算子 (arithmetic operator) 包含加&#12289;減&#12289;乘&#12289;除&#12289;取餘數&#65292;皆需兩個運算元構成運算式。</p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">+</td><td align="center">加</td><td align="center">a + b</td></tr>
+<tr><td align="center">-</td><td align="center">減</td><td align="center">a - b</td></tr>
+<tr><td align="center"><em></em></td><td align="center">乘</td><td align="center">a  b</td></tr>
+<tr><td align="center">/</td><td align="center">除</td><td align="center">a / b</td></tr>
+<tr><td align="center">%</td><td align="center">取餘數</td><td align="center">a % b</td></tr>
+</table>
+
+<h2 id="單元運算子"><a href="#單元運算子" class="headerlink" title="單元運算子"></a>單元運算子</h2><p>Java 的單元運算子 (unary operator) 僅需一個運算元&#65292;有表示數字為正負的 + &#12289; - &#65292;另有遞增運算子 (increment operator) ++ &#65292;遞減運算子 (decrement operator) -- &#65292;以及邏輯補數運算子 (logical compliment operator)  ! &#65292;如下列表  </p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">+</td><td align="center">正</td><td align="center">+a</td></tr>
+<tr><td align="center">-</td><td align="center">負</td><td align="center">-a</td></tr>
+<tr><td align="center">++</td><td align="center">遞增</td><td align="center">++a, a++</td></tr>
+<tr><td align="center">--</td><td align="center">遞減</td><td align="center">--a, a--</td></tr>
+<tr><td align="center">!</td><td align="center">邏輯補數運算子</td><td align="center">!a</td></tr>
+</table>
+
+<h2 id="相等性及關係運算子"><a href="#相等性及關係運算子" class="headerlink" title="相等性及關係運算子"></a>相等性及關係運算子</h2><p>Java 的相等性及關係運算子 (equality and Relational Operator) &#65292;比較兩個運算元是否相等或大於小於&#65292;結果為布林字面常數 (Boolean literal) &#65292;也就是<i>true</i> 或 <i>false</i> &#65292;如下列表  </p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">==</td><td align="center">相等</td><td align="center">a == b</td></tr>
+<tr><td align="center">!=</td><td align="center">不相等</td><td align="center">a != b</td></tr>
+<tr><td align="center">&gt;</td><td align="center">大於</td><td align="center">a &gt;= b</td></tr>
+<tr><td align="center">&gt;=</td><td align="center">大於等於</td><td align="center">a &gt;= b</td></tr>
+<tr><td align="center">&lt;</td><td align="center">小於</td><td align="center">a &lt; b</td></tr>
+<tr><td align="center">&lt;=</td><td align="center">小於等於</td><td align="center">a &lt;= b</td></tr>
+</table>
+
+<h2 id="條件運算子"><a href="#條件運算子" class="headerlink" title="條件運算子"></a>條件運算子</h2><p>Java 的條件運算子 (conditional operator) &#65292;測試兩個運算元是否都為 <i>true</i> &#65292;或有一個為  <i>true</i> &#65292;另有一個三元運算子&#65292;若第一個運算元為 <i>true</i> &#65292;運算結果就是第二個運算元&#65292;反之結果為第三個運算元&#65292;如下列表  </p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">&amp;&amp;</td><td align="center">邏輯且</td><td align="center">a &amp;&amp; b</td></tr>
+<tr><td align="center">||</td><td align="center">邏輯或</td><td align="center">a || b</td></tr>
+<tr><td align="center">?:</td><td align="center">條件選擇</td><td align="center">a ? b : c</td></tr>
+</table>
+
+<h2 id="instanceof-運算子"><a href="#instanceof-運算子" class="headerlink" title="instanceof 運算子"></a>instanceof 運算子</h2><p>Java 的 <b>instanceof</b> 運算子 (instanceof operator) &#65292;測試某一物件是否為另一類別 (class) 的子類別 (subclass) &#65292;或是某介面 (interface) 的實作介面&#65292;如下列表  </p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">instanceof</td><td align="center">測試 b 是不是 a 的子類別或是實作介面</td><td align="center">a instanceof b</td></tr>
+</table>
+
+<h2 id="位元運算子"><a href="#位元運算子" class="headerlink" title="位元運算子"></a>位元運算子</h2><p>Java 亦提供給整數型態進行逐位元運算的運算子&#65292;例如某 16 位元整數如下  </p>
+<table>
+<tr><th align="center">運算子</th><th align="center">功能</th><th align="center">範例</th></tr>
+<tr><td align="center">~</td><td align="center">取補數</td><td align="center">~a</td></tr>
+<tr><td align="center">&lt;&lt;</td><td align="center">保留正負號向左位移</td><td align="center">a &lt;&lt; b</td></tr>
+<tr><td align="center">&gt;&gt;</td><td align="center">保留正負號向右位移</td><td align="center">a &gt;&gt; b</td></tr>
+<tr><td align="center">&gt;&gt;&gt;</td><td align="center">無正負號向右位移</td><td align="center">a &gt;&gt;&gt; b</td></tr>
+<tr><td align="center">&amp;</td><td align="center">位元且</td><td align="center">a &amp; b</td></tr>
+<tr><td align="center">^</td><td align="center">位元互斥或</td><td align="center">a ^ b</td></tr>
+<tr><td align="center">|</td><td align="center">位元包含或</td><td align="center">a | b</td></tr>
+</table>
+
+<hr>
+]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Eclipse: Tomcat Embedded]]></title>
       <url>http://yoursite.com/2017/01/13/Eclipse-Tomcat-Embedded/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">

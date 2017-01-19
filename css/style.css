@@ -1014,13 +1014,13 @@ a {
   background: rgba(215,216,215,0.4);
 }
 .scroll a .fa {
-  color: rgba(0, 143, 0,0.8);
+  color: rgba(255,255,255,0.8);
 }
 .scroll a:hover {
   background: rgba(147,181,224,0.3) !important;
 }
 .scroll a:hover .fa {
-  color: #6C6C6C;
+  color: #fff;
 }
 .scroll a:not(:last-child) {
   border-bottom: 1px solid #fff;
@@ -1265,7 +1265,7 @@ color
   visibility: hidden;
 }
 .article img {
-  max-width: 50%;
+  max-width: 100%;
   margin: 0.5em auto;
 }
 @-webkit-keyframes cd-bounce-1 {
