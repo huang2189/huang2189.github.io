@@ -4,6 +4,24 @@
   
     
     <entry>
+      <title><![CDATA[Android 使用Unicode]]></title>
+      <url>http://yoursite.com/2017/01/24/Android-%E4%BD%BF%E7%94%A8Unicode/</url>
+      <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
+<a id="more"></a></excerpt></p>
+<the rest="" of="" contents="" |="" 全文="">
+
+<p>先將要用的Unicode字元輸入到 <strong>strings.xml</strong>  </p>
+<p><img src="https://i.imgbox.com/9L13OvbQ.png" alt="">  </p>
+<p>點右邊 <strong>text</strong> 的 <strong>...</strong>  </p>
+<p><img src="https://i.imgbox.com/8VuBJyUy.png" alt="">  </p>
+<p>可以看到剛剛輸入的Unicode字元<br>雙擊要用的字元  </p>
+<p><img src="https://i.imgbox.com/cWctL9ZR.png" alt="">  </p>
+<p>結果  </p>
+<p><img src="https://i.imgbox.com/5mCsU3kh.png" alt=""></p>
+</the>]]></content>
+    </entry>
+    
+    <entry>
       <title><![CDATA[Android 多國語系]]></title>
       <url>http://yoursite.com/2017/01/22/Android-%E5%A4%9A%E5%9C%8B%E8%AA%9E%E7%B3%BB/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首頁摘要="">
